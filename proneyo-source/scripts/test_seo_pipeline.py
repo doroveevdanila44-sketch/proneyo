@@ -3,6 +3,7 @@
 import hashlib,json,re,shutil,subprocess,tempfile,unittest
 from pathlib import Path
 from check_static_content import validate_static
+from check_seo import validate
 ROOT=Path(__file__).resolve().parents[1]
 def build(root,*args):
  return subprocess.run(['python',str(ROOT/'scripts/prepare_seo.py'),'--root',str(root),*args],capture_output=True,text=True)
@@ -25,6 +26,13 @@ class Pipeline(unittest.TestCase):
   for p in (self.root/'dist').rglob('*'):
    if p.suffix in ['.html','.xml','.txt','.json']:self.assertNotIn(old,p.read_text(),str(p))
   self.assertIn('https://example.test/sitemap.xml',(self.root/'dist/robots.txt').read_text())
+ def test_social_image_cannot_point_to_another_host(self):
+  self.assertEqual(build(self.root).returncode,0)
+  p=self.root/'dist/index.html';t=p.read_text()
+  t=re.sub(r'(<meta property="og:image" content=")[^"]+',r'\1https://closed-preview.example/assets/logo.png',t,count=1)
+  p.write_text(t)
+  result=validate(self.root)
+  self.assertFalse(result['passed']);self.assertIn('/: social image origin',result['errors'])
  def test_static_prices_cannot_move_into_template(self):
   self.assertEqual(build(self.root).returncode,0)
   p=self.root/'dist/prices/index.html';t=p.read_text()

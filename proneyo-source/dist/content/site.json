@@ -1,6 +1,6 @@
 {
   "name": "Про НЕЁ",
-  "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/",
+  "url": "https://proneyo.vercel.app/",
   "city": "Санкт-Петербург",
   "address": "Пейзажная улица, 4, корпус 3",
   "telephone": "+79930712740",
@@ -8,32 +8,32 @@
   "directions": [
     {
       "name": "Косметология",
-      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/kosmetologiya/",
+      "url": "https://proneyo.vercel.app/services/kosmetologiya/",
       "procedures": 33
     },
     {
       "name": "Массаж",
-      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/massazh/",
+      "url": "https://proneyo.vercel.app/services/massazh/",
       "procedures": 15
     },
     {
       "name": "SPA-уход",
-      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/spa-uhod/",
+      "url": "https://proneyo.vercel.app/services/spa-uhod/",
       "procedures": 1
     },
     {
       "name": "Коррекция фигуры",
-      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/korrekciya-figury/",
+      "url": "https://proneyo.vercel.app/services/korrekciya-figury/",
       "procedures": 15
     },
     {
       "name": "Детский массаж",
-      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/detskiy-massazh/",
+      "url": "https://proneyo.vercel.app/services/detskiy-massazh/",
       "procedures": 2
     },
     {
       "name": "Депиляция и пирсинг",
-      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/depilyaciya-i-pirsing/",
+      "url": "https://proneyo.vercel.app/services/depilyaciya-i-pirsing/",
       "procedures": 4
     }
   ],

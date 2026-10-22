@@ -1,12 +1,12 @@
 {
-  "site_url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site",
+  "site_url": "https://proneyo.vercel.app",
   "generated_pages": {
     "/": {
       "file": "index.html",
       "title": "Косметология и массаж в Санкт-Петербурге — Про НЕЁ",
       "description": "Косметология, массаж для взрослых и детей, SPA и уход за телом в студии Про НЕЁ. Санкт-Петербург, Пейзажная улица, 4, корпус 3. Цены и запись в DIKIDI.",
       "indexable": true,
-      "image": "/assets/hero-desktop.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BeautySalon",
         "WebPage",
@@ -19,7 +19,7 @@
       "title": "Цены на косметологию и массаж в Санкт-Петербурге — Про НЕЁ",
       "description": "Прайс студии Про НЕЁ на Пейзажной: косметология, взрослый и детский массаж, SPA, коррекция фигуры, депиляция и пирсинг. Стоимость, длительность и запись.",
       "indexable": true,
-      "image": "/assets/hero-desktop.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BeautySalon",
         "BreadcrumbList",
@@ -34,7 +34,7 @@
       "title": "Услуги косметологии и массажа в Санкт-Петербурге — Про НЕЁ",
       "description": "Шесть направлений студии Про НЕЁ: косметология, массаж, SPA, коррекция фигуры, детский массаж, депиляция и пирсинг. Пейзажная улица, 4, корпус 3.",
       "indexable": true,
-      "image": "/assets/hero-desktop.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BeautySalon",
         "BreadcrumbList",
@@ -139,7 +139,7 @@
       "title": "Об уходе простыми словами — статьи Про НЕЁ",
       "description": "Материалы студии Про НЕЁ об уходе за лицом и телом, косметологии и массаже. Вопросы перед процедурами и понятные объяснения.",
       "indexable": false,
-      "image": "/assets/hero-desktop.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BreadcrumbList",
         "CollectionPage",
@@ -152,7 +152,7 @@
       "title": "Ботулинотерапия: что обсудить до процедуры — Про НЕЁ",
       "description": "Ботулинотерапия: что обсудить до процедуры. Статья готовится.",
       "indexable": false,
-      "image": "/assets/hero-desktop.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BreadcrumbList",
         "WebPage",
@@ -165,7 +165,7 @@
       "title": "Косметология летом и зимой: как учитывать сезон — Про НЕЁ",
       "description": "Косметология летом и зимой: как учитывать сезон. Статья готовится.",
       "indexable": false,
-      "image": "/assets/hero-desktop.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BreadcrumbList",
         "WebPage",
@@ -178,7 +178,7 @@
       "title": "Ручной и аппаратный массаж: в чём разница — Про НЕЁ",
       "description": "Ручной и аппаратный массаж: в чём разница. Статья готовится.",
       "indexable": false,
-      "image": "/assets/hero-desktop.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BreadcrumbList",
         "WebPage",
@@ -191,7 +191,7 @@
       "title": "Страница не найдена — Про НЕЁ",
       "description": "Страница не найдена. Услуги и запись в студию Про НЕЁ.",
       "indexable": false,
-      "image": "/assets/hero-desktop.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "WebPage",
         "WebSite"
@@ -202,5 +202,5 @@
   "sitemap_entries": 9,
   "published_articles": 0,
   "procedure_records": 73,
-  "cache": "b57a6f046708"
+  "cache": "99da7f1002f1"
 }

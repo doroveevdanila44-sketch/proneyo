@@ -35,6 +35,20 @@ def validate(root):
   canon=[a.get('href') for tag,a in s.tags if tag=='link' and a.get('rel')=='canonical'];expect(canon==[base+route],route+': canonical')
   robots=[a.get('content','') for tag,a in s.tags if tag=='meta' and a.get('name')=='robots'];expect(len(robots)==1 and ('noindex' not in robots[0])==meta['indexable'],route+': robots')
   expect(any(tag=='meta' and a.get('property')=='og:url' and a.get('content')==base+route for tag,a in s.tags),route+': og:url')
+  images=[a.get('content','') for tag,a in s.tags if tag=='meta' and a.get('property')=='og:image']
+  expect(len(images)==1,route+': social image count')
+  if len(images)==1:
+   image_url=urlsplit(images[0]);image_path=d/unquote(image_url.path).lstrip('/')
+   expect(image_url.scheme=='https' and image_url.netloc==urlsplit(base).netloc,route+': social image origin')
+   expect(image_path.is_file(),route+': missing social image')
+   expect(any(tag=='meta' and a.get('name')=='twitter:image' and a.get('content')==images[0] for tag,a in s.tags),route+': twitter image')
+   if route=='/':
+    cfg=json.loads((root/'seo.config.json').read_text())
+    expect(images[0]==base+cfg['social_image'],'home social logo')
+    if image_path.is_file():
+     data=image_path.read_bytes()
+     expect(data.startswith(b'\x89PNG\r\n\x1a\n') and len(data)>24,'home social image PNG')
+     expect((int.from_bytes(data[16:20],'big'),int.from_bytes(data[20:24],'big'))==(1200,630),'home social image dimensions')
   expect(any(tag=='meta' and a.get('name')=='theme-color' and a.get('content')=='#fbf7f1' for tag,a in s.tags),route+': theme')
   expect(len(s.schemas)==1,route+': schema graph')
   for sc in s.schemas:

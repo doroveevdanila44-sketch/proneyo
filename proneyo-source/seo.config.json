@@ -1,5 +1,5 @@
 {
-  "site_url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site",
+  "site_url": "https://proneyo.vercel.app",
   "name": "Про НЕЁ",
   "language": "ru-RU",
   "theme_color": "#fbf7f1",
@@ -18,5 +18,9 @@
   ],
   "default_image": "/assets/hero-desktop.webp",
   "default_image_alt": "Предметная композиция косметических средств в бежевых и ягодных тонах",
+  "social_image": "/assets/pro-neyo-social-v1.png",
+  "social_image_alt": "Логотип бьюти-студии Про НЕЁ",
+  "social_image_width": 1200,
+  "social_image_height": 630,
   "logo": "/assets/brand-logo.png"
 }
