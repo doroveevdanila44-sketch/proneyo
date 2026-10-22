@@ -1,0 +1,206 @@
+{
+  "site_url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site",
+  "generated_pages": {
+    "/": {
+      "file": "index.html",
+      "title": "Косметология и массаж в Санкт-Петербурге — Про НЕЁ",
+      "description": "Косметология, массаж для взрослых и детей, SPA и уход за телом в студии Про НЕЁ. Санкт-Петербург, Пейзажная улица, 4, корпус 3. Цены и запись в DIKIDI.",
+      "indexable": true,
+      "image": "/assets/hero-desktop.webp",
+      "schema_types": [
+        "BeautySalon",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/prices/": {
+      "file": "prices/index.html",
+      "title": "Цены на косметологию и массаж в Санкт-Петербурге — Про НЕЁ",
+      "description": "Прайс студии Про НЕЁ на Пейзажной: косметология, взрослый и детский массаж, SPA, коррекция фигуры, депиляция и пирсинг. Стоимость, длительность и запись.",
+      "indexable": true,
+      "image": "/assets/hero-desktop.webp",
+      "schema_types": [
+        "BeautySalon",
+        "BreadcrumbList",
+        "CollectionPage",
+        "OfferCatalog",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/services/": {
+      "file": "services/index.html",
+      "title": "Услуги косметологии и массажа в Санкт-Петербурге — Про НЕЁ",
+      "description": "Шесть направлений студии Про НЕЁ: косметология, массаж, SPA, коррекция фигуры, детский массаж, депиляция и пирсинг. Пейзажная улица, 4, корпус 3.",
+      "indexable": true,
+      "image": "/assets/hero-desktop.webp",
+      "schema_types": [
+        "BeautySalon",
+        "BreadcrumbList",
+        "CollectionPage",
+        "ItemList",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/services/kosmetologiya/": {
+      "file": "services/kosmetologiya/index.html",
+      "title": "Косметология в Санкт-Петербурге, цены — Про НЕЁ",
+      "description": "Косметология в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 500 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "indexable": true,
+      "image": "/assets/service-face-square-v2.webp",
+      "schema_types": [
+        "BeautySalon",
+        "BreadcrumbList",
+        "Service",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/services/massazh/": {
+      "file": "services/massazh/index.html",
+      "title": "Массаж в Санкт-Петербурге, цены — Про НЕЁ",
+      "description": "Массаж в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 450 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "indexable": true,
+      "image": "/assets/service-massage-square-v1.webp",
+      "schema_types": [
+        "BeautySalon",
+        "BreadcrumbList",
+        "Service",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/services/spa-uhod/": {
+      "file": "services/spa-uhod/index.html",
+      "title": "SPA-уход в Санкт-Петербурге, цены — Про НЕЁ",
+      "description": "SPA-уход в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "indexable": true,
+      "image": "/assets/service-spa-square-v1.webp",
+      "schema_types": [
+        "BeautySalon",
+        "BreadcrumbList",
+        "Service",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/services/korrekciya-figury/": {
+      "file": "services/korrekciya-figury/index.html",
+      "title": "Коррекция фигуры в Санкт-Петербурге, цены — Про НЕЁ",
+      "description": "Коррекция фигуры в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "indexable": true,
+      "image": "/assets/service-body-square-v1.webp",
+      "schema_types": [
+        "BeautySalon",
+        "BreadcrumbList",
+        "Service",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/services/detskiy-massazh/": {
+      "file": "services/detskiy-massazh/index.html",
+      "title": "Детский массаж в Санкт-Петербурге, цены — Про НЕЁ",
+      "description": "Детский массаж в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "indexable": true,
+      "image": "/assets/service-children-square-v1.webp",
+      "schema_types": [
+        "BeautySalon",
+        "BreadcrumbList",
+        "Service",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/services/depilyaciya-i-pirsing/": {
+      "file": "services/depilyaciya-i-pirsing/index.html",
+      "title": "Депиляция и пирсинг в Санкт-Петербурге, цены — Про НЕЁ",
+      "description": "Депиляция и пирсинг в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 300 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "indexable": true,
+      "image": "/assets/service-details-square-v1.webp",
+      "schema_types": [
+        "BeautySalon",
+        "BreadcrumbList",
+        "Service",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/articles/": {
+      "file": "articles/index.html",
+      "title": "Об уходе простыми словами — статьи Про НЕЁ",
+      "description": "Материалы студии Про НЕЁ об уходе за лицом и телом, косметологии и массаже. Вопросы перед процедурами и понятные объяснения.",
+      "indexable": false,
+      "image": "/assets/hero-desktop.webp",
+      "schema_types": [
+        "BreadcrumbList",
+        "CollectionPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/articles/botulinoterapiya-do-procedury/": {
+      "file": "articles/botulinoterapiya-do-procedury/index.html",
+      "title": "Ботулинотерапия: что обсудить до процедуры — Про НЕЁ",
+      "description": "Ботулинотерапия: что обсудить до процедуры. Статья готовится.",
+      "indexable": false,
+      "image": "/assets/hero-desktop.webp",
+      "schema_types": [
+        "BreadcrumbList",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/articles/kosmetologiya-i-sezon/": {
+      "file": "articles/kosmetologiya-i-sezon/index.html",
+      "title": "Косметология летом и зимой: как учитывать сезон — Про НЕЁ",
+      "description": "Косметология летом и зимой: как учитывать сезон. Статья готовится.",
+      "indexable": false,
+      "image": "/assets/hero-desktop.webp",
+      "schema_types": [
+        "BreadcrumbList",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/articles/ruchnoy-i-apparatnyy-massazh/": {
+      "file": "articles/ruchnoy-i-apparatnyy-massazh/index.html",
+      "title": "Ручной и аппаратный массаж: в чём разница — Про НЕЁ",
+      "description": "Ручной и аппаратный массаж: в чём разница. Статья готовится.",
+      "indexable": false,
+      "image": "/assets/hero-desktop.webp",
+      "schema_types": [
+        "BreadcrumbList",
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    },
+    "/404.html": {
+      "file": "404.html",
+      "title": "Страница не найдена — Про НЕЁ",
+      "description": "Страница не найдена. Услуги и запись в студию Про НЕЁ.",
+      "indexable": false,
+      "image": "/assets/hero-desktop.webp",
+      "schema_types": [
+        "WebPage",
+        "WebSite"
+      ],
+      "lastmod": "2026-10-22"
+    }
+  },
+  "sitemap_entries": 9,
+  "published_articles": 0,
+  "procedure_records": 73,
+  "cache": "b57a6f046708"
+}

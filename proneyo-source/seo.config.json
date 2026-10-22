@@ -1,0 +1,22 @@
+{
+  "site_url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site",
+  "name": "Про НЕЁ",
+  "language": "ru-RU",
+  "theme_color": "#fbf7f1",
+  "telephone": "+79930712740",
+  "telephone_display": "+7 (993) 071-27-40",
+  "city": "Санкт-Петербург",
+  "street": "Пейзажная улица, 4, корпус 3",
+  "location_note": "Парадная 1 · 15 этаж",
+  "country": "RU",
+  "booking_url": "https://dikidi.net/ru/record/738151",
+  "map_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/",
+  "profile_url": "https://dikidi.net/ru/profile/pro_neyo_738151/services",
+  "social_urls": [
+    "https://vk.ru/milovidovaasspb",
+    "https://t.me/kosmetichkyy"
+  ],
+  "default_image": "/assets/hero-desktop.webp",
+  "default_image_alt": "Предметная композиция косметических средств в бежевых и ягодных тонах",
+  "logo": "/assets/brand-logo.png"
+}

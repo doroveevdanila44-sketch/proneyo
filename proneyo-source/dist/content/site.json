@@ -1,0 +1,42 @@
+{
+  "name": "Про НЕЁ",
+  "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/",
+  "city": "Санкт-Петербург",
+  "address": "Пейзажная улица, 4, корпус 3",
+  "telephone": "+79930712740",
+  "booking_url": "https://dikidi.net/ru/record/738151",
+  "directions": [
+    {
+      "name": "Косметология",
+      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/kosmetologiya/",
+      "procedures": 33
+    },
+    {
+      "name": "Массаж",
+      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/massazh/",
+      "procedures": 15
+    },
+    {
+      "name": "SPA-уход",
+      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/spa-uhod/",
+      "procedures": 1
+    },
+    {
+      "name": "Коррекция фигуры",
+      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/korrekciya-figury/",
+      "procedures": 15
+    },
+    {
+      "name": "Детский массаж",
+      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/detskiy-massazh/",
+      "procedures": 2
+    },
+    {
+      "name": "Депиляция и пирсинг",
+      "url": "https://pro-neyo-beauty.pzcybksm6v.chatgpt.site/services/depilyaciya-i-pirsing/",
+      "procedures": 4
+    }
+  ],
+  "prices_source": "https://dikidi.net/ru/profile/pro_neyo_738151/services",
+  "prices_verified_at": "2026-10-22"
+}

@@ -1,0 +1,33 @@
+# Template only. Replace DOMAIN, DOCUMENT_ROOT and certificate paths before use.
+server {
+    listen 80;
+    server_name DOMAIN www.DOMAIN;
+    return 308 https://DOMAIN$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name www.DOMAIN;
+    ssl_certificate /etc/letsencrypt/live/DOMAIN/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/DOMAIN/privkey.pem;
+    return 308 https://DOMAIN$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name DOMAIN;
+    ssl_certificate /etc/letsencrypt/live/DOMAIN/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/DOMAIN/privkey.pem;
+    root DOCUMENT_ROOT;
+    index index.html;
+    charset utf-8;
+    etag on;
+    gzip on;
+    gzip_types text/plain text/css application/javascript application/json application/xml image/svg+xml;
+    error_page 404 /404.html;
+    location = /index.html { return 301 /; }
+    location ~ ^(.+)/index\.html$ { return 301 $1/$is_args$args; }
+    location ~ ^/(services|prices|articles)(/[^./]+)?$ { return 301 $uri/$is_args$args; }
+    location = /sw.js { add_header Cache-Control "no-cache"; }
+    location ~* \.(css|js|xml|webmanifest)$ { add_header Cache-Control "no-cache"; }
+    location ~* \.(webp|png|svg)$ { expires 30d; }
+    location / { try_files $uri $uri/ =404; }
+}

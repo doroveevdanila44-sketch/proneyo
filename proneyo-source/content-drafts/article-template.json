@@ -1,0 +1,13 @@
+{
+  "slug": "novyy-material",
+  "title": "Название будущего материала",
+  "summary": "Краткое точное описание темы.",
+  "status": "coming_soon",
+  "editorial_approved": false,
+  "author": {"name": "", "url": "/#specialists"},
+  "published_at": "",
+  "updated_at": "",
+  "image": "",
+  "sections": [{"heading": "Подзаголовок", "paragraphs": [""], "bullets": []}],
+  "sources": []
+}
