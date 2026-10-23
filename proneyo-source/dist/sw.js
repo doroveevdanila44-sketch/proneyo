@@ -1,4 +1,4 @@
-const CACHE='pro-neyo-99da7f1002f1';
+const CACHE='pro-neyo-095dd8721009';
 const SHELL=["/","/prices/","/services/","/services/kosmetologiya/","/services/massazh/","/services/spa-uhod/","/services/korrekciya-figury/","/services/detskiy-massazh/","/services/depilyaciya-i-pirsing/","/style.css","/app.js","/manifest.webmanifest","/assets/app-icon-192.png","/assets/app-store-light-clean.webp","/assets/app-visual.webp","/assets/brand-logo.png","/assets/favicon.svg","/assets/hero-desktop.webp","/assets/membership-10000-v2.webp","/assets/membership-5000-v3.webp","/assets/service-body-square-v1.webp","/assets/service-children-square-v1.webp","/assets/service-details-square-v1.webp","/assets/service-face-square-v2.webp","/assets/service-massage-square-v1.webp","/assets/service-spa-square-v1.webp"];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
