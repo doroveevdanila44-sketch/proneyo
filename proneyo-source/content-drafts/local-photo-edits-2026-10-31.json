@@ -1,0 +1,22 @@
+{
+  "updated_at": "2026-10-31",
+  "method": "Built-in image_gen localized edits.",
+  "changes": [
+    {
+      "scope": "Consultation article facial likeness with new multi-angle reference, preserving composition.",
+      "input_asset": "dist/assets/article-consultation-identity-v6.webp",
+      "reference_files": [
+        "IMG_1009.jpeg",
+        "IMG_1038.jpeg"
+      ],
+      "final_asset": "dist/assets/article-consultation-identity-v7.webp",
+      "prompt": "Use case: identity-preserve. Precise localized face correction for an existing article photo.\nImage 1 is the EDIT TARGET and must keep its exact composition: the woman seated at a desk, pen in hand, looking toward image-left.\nImage 2 is the NEW PRIMARY FACIAL IDENTITY reference. It is a phone screenshot: use ONLY the central multi-view portrait sheet, especially its lower-right three-quarter portrait looking toward image-left, plus its frontal portrait to understand the same woman's proportions. Ignore the phone interface, margins, thumbnails and all other screenshot content.\nImage 3 is a high-resolution portrait of the same woman, supporting her real eye, eyebrow, nose, lip and skin details.\n\nCorrect only the visible face in image 1 to reproduce this particular woman's likeness more closely. Use the reference's broader oval cheek and jaw proportions, rounded cheek volume, dark angular arched eyebrows, dark brown eyes, distinctive nose profile and tip, full lips and rounded chin. Match the three-quarter structure visible in the lower-right portrait of image 2. Preserve her individual features and apparent age. Retain a relaxed closed-mouth, attentive expression.\nMaintain the EXACT head position, tilt, direction of gaze and scale already present in image 1. Do not turn the head toward the camera or change its pose to copy a reference.\nEverything outside the facial skin region is locked: all hair and hair placement, shoulders, white coat and folds, both hands and fingers, blue pen, paper, table, chairs, marble wall, background objects, lighting, warm colors, 4:3 framing, camera angle and zoom. Do not retouch or redesign the rest of the image. Seamlessly integrate the corrected face into the existing light with realistic skin texture. Output one unchanged-composition photograph, no collage, text or borders."
+    },
+    {
+      "scope": "Correct posterior knees in prone calf-massage photo; remove anterior kneecap-like domes.",
+      "input_asset": "dist/assets/roller-calf-anatomy-v10.webp",
+      "final_asset": "dist/assets/roller-posterior-knees-v11.webp",
+      "prompt": "Precise localized anatomical correction of this professional calf-massage photograph. Change ONLY the two knee regions in the upper-left / upper-middle area, between the blanket and the calf muscles.\nThe adult client is LYING FACE DOWN. We see the BACKS of both straight legs. Therefore the visible knee areas must be posterior knees (popliteal regions), NOT kneecaps. The kneecaps face down into the couch and cannot be visible from this camera.\nRemove the two round raised patella-like domes currently facing the camera. Rebuild each as a natural, mostly flat to slightly recessed posterior-knee transition with one delicate transverse skin crease and subtle side tendon contours, flowing smoothly from the back of the thigh into the calf. Legs are extended and relaxed, so the recesses are shallow and ordinary, not dramatic dimples or sharp grooves. Both posterior knees belong to the same person and remain at matching anatomical levels.\nKeep the legs straight and alongside one another, the SAME overall leg sizes, calf contours, ankles, skin tone and texture, blanket, couch, grey/orange/gold roller, black gloves, therapist forearms and berry uniform. Lock the camera angle, zoom, lighting, all other pixels and 4:3 composition. Do not move the device or re-pose the client. Realistic natural photograph, no anatomy labels or graphics."
+    }
+  ]
+}
