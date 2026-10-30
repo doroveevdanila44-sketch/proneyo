@@ -1,32 +1,48 @@
 {
   "source": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/",
+  "rating_widget_url": "https://yandex.ru/sprav/widget/rating-badge/174748430473?type=rating",
   "checked_at": "2026-10-30",
   "format": "verbatim_excerpts",
+  "dikidi": {
+    "url": "https://dikidi.net/ru/profile/pro_neyo_738151/reviews",
+    "rating_label": "4,9",
+    "review_count": 31,
+    "rating_count": 94,
+    "count_label": "31 отзыв · 94 оценки"
+  },
   "items": [
     {
-      "author": "Надежда Попова",
-      "quote": "Мастер просто супер!!! Всё подробно объяснит!",
+      "author": "Ирина",
+      "source_name": "Яндекс Карты",
+      "provider": "yandex",
+      "quote": "Индивидуально подобрала мне необходимые средства(причем цены демократичны). Через несколько дней Анастасия поинтересовалась как мое самочувствие после проведенной процедуры.",
       "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/",
       "rating": 5,
-      "published_at": "2026-06-20",
-      "date_label": "20 июня 2026"
+      "published_at": "2024-05-21",
+      "date_label": "21 мая 2024",
+      "read_label": "Яндекс Картах"
     },
     {
-      "author": "Ольга Ж.",
-      "quote": "Прекрасный косметолог! Всё объяснила по ходу процедуры",
-      "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/",
+      "author": "Анастасия Осипова",
+      "source_name": "DIKIDI",
+      "provider": "dikidi",
+      "quote": "…массаж лица + ШВЗ + голова: кожа как у младенца, полный релакс!",
+      "source_url": "https://dikidi.net/ru/profile/pro_neyo_738151/reviews",
       "rating": 5,
-      "published_at": "2026-04-04",
-      "date_label": "4 апреля 2026"
+      "published_at": "2026-10-20",
+      "date_label": "20 октября 2026",
+      "review_id": "19529364"
     },
     {
-      "author": "Светлана С.",
-      "quote": "Результатом осталась очень довольна",
-      "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/",
+      "author": "Валентина Никулина",
+      "source_name": "DIKIDI",
+      "provider": "dikidi",
+      "quote": "После сеанса чувствуется, что тело действительно «промяли» и взбодрили.",
+      "source_url": "https://dikidi.net/ru/profile/pro_neyo_738151/reviews",
       "rating": 5,
-      "published_at": "2026-06-09",
-      "date_label": "9 июня 2026"
+      "published_at": "2026-09-10",
+      "date_label": "10 сентября 2026",
+      "review_id": "18742844"
     }
-  ],
-  "rating_widget_url": "https://yandex.ru/sprav/widget/rating-badge/174748430473?type=rating"
+  ]
 }

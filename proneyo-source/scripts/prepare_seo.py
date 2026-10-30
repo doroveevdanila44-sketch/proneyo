@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlsplit
 import argparse, hashlib, html, json, re
 import xml.etree.ElementTree as ET
-from studio_sections import loyalty_copy, review_cards, faq_section, faq_schema
+from studio_sections import loyalty_copy, loyalty_banner, review_cards, faq_section, faq_schema
 
 ROOT=Path(__file__).resolve().parents[1]
 H=html.escape
@@ -60,8 +60,8 @@ def main():
  bodyheader=re.search(r'<body[^>]*>(.*?)<main',ptemplate,re.S).group(1)
  footer=re.search(r'<footer class="site-footer container">.*?</footer>',(d/'index.html').read_text(),re.S).group(0)
  def shell(main):return '<!doctype html>\n<html lang="ru"><head></head><body class="inner-page">'+bodyheader+main+footer+'</body></html>\n'
- def book(label='Записаться онлайн'):
-  return f'<a class="button" href="{cfg["booking_url"]}" target="_blank" rel="noopener noreferrer">{label} {ARROW}</a>'
+ def book(label='Записаться онлайн',url=None):
+  return f'<a class="button" href="{url or cfg["booking_url"]}" target="_blank" rel="noopener noreferrer">{label} {ARROW}</a>'
  def breadcrumbs(parts):
   return '<nav class="breadcrumbs" aria-label="Хлебные крошки">'+''.join(('<span aria-hidden="true">/</span>' if i else '')+(f'<a href="{p}">{H(n)}</a>' if p else f'<span aria-current="page">{H(n)}</span>') for i,(n,p) in enumerate(parts))+'</nav>'
  def contact(compact=False):
@@ -73,7 +73,7 @@ def main():
  def studio_schema():
   return {'@type':'BeautySalon','@id':base+'/#studio','name':cfg['name'],'url':base+'/','logo':absurl(cfg['logo']),'image':absurl(cfg['default_image']),'telephone':cfg['telephone'],'description':'Современная бьюти-студия в Санкт-Петербурге. Косметология, массаж для взрослых и детей, SPA-уход, коррекция фигуры, депиляция лица и пирсинг ушей.','address':{'@type':'PostalAddress','streetAddress':cfg['street'],'addressLocality':cfg['city'],'addressCountry':cfg['country']},'hasMap':cfg['map_url'],'sameAs':[cfg['map_url'],cfg['profile_url']]+cfg['social_urls'],'hasOfferCatalog':{'@type':'OfferCatalog','name':'Направления услуг студии','itemListElement':[{'@type':'OfferCatalog','name':c['name'],'url':base+'/services/'+c['slug']+'/'} for c in CATEGORIES]}}
  def offer(s):
-  return {'@type':'Offer','@id':base+'/prices/#offer-'+s['id'],'name':s['display_name'],'price':s['price_rub'],'priceCurrency':'RUB','url':cfg['booking_url'],'description':f'{s["duration_minutes"]} мин. '+('Стоимость одного сеанса в курсе; полная стоимость курса указана в названии.' if s['price_basis']=='за сеанс в курсе' else 'Стоимость процедуры.'),'itemOffered':{'@type':'Service','@id':base+'/prices/#procedure-'+s['id'],'name':s['display_name'],'serviceType':s['category'],'provider':{'@id':base+'/#studio'},'areaServed':{'@type':'City','name':cfg['city']}}}
+  return {'@type':'Offer','@id':base+'/prices/#offer-'+s['id'],'name':s['display_name'],'price':s['price_rub'],'priceCurrency':'RUB','url':s['url'],'description':f'{s["duration_minutes"]} мин. '+('Стоимость одного сеанса в курсе; полная стоимость курса указана в названии.' if s['price_basis']=='за сеанс в курсе' else 'Стоимость процедуры.'),'itemOffered':{'@type':'Service','@id':base+'/prices/#procedure-'+s['id'],'name':s['display_name'],'serviceType':s['category'],'provider':{'@id':base+'/#studio'},'areaServed':{'@type':'City','name':cfg['city']}}}
  def category_items(c):return [s for s in items if s['site_group'] in c['groups']]
  def cards(tag='h3',modal=True):
   return '<div class="service-grid">'+''.join(f'''<a class="service-card service-tile" href="/services/{c['slug']}/"{(' data-service="'+c['key']+'" aria-haspopup="dialog" aria-controls="service-dialog"') if modal else ''}><span class="service-image"><img src="{c['image']}" width="1254" height="1254" alt="{H(c['name'])}: иллюстрация направления студии" loading="lazy" decoding="async"></span><div class="service-tile-copy"><{tag} class="service-caption">{c['name']}</{tag}><p class="service-note">{c['note']}</p></div><span class="service-open" aria-hidden="true">{ARROW}</span></a>''' for c in CATEGORIES)+'</div>'
@@ -136,6 +136,10 @@ def main():
  t=re.sub(r'<p class="procedure-meta" data-catalog-id="(\d+)">.*?</p>',feature_price,t,flags=re.S)
  if loyalty:
   t=re.sub(r'<div class="app-copy(?: loyalty-copy)?">.*?(?=<div class="app-art-group">)',lambda m:loyalty_copy(loyalty)+'\n      ',t,count=1,flags=re.S)
+ if loyalty:
+  banner=loyalty_banner(loyalty)
+  if 'id="loyalty"' in t:t=re.sub(r'<section class="section container loyalty-section".*?</section>',lambda m:banner,t,count=1,flags=re.S)
+  else:t=t.replace('<section class="section reviews-section"',banner+'\n\n    <section class="section reviews-section"',1)
  if reviews:
   t=re.sub(r'<section class="section reviews-section".*?</section>',lambda m:review_cards(reviews),t,count=1,flags=re.S)
  if home_faq:
@@ -164,7 +168,7 @@ def main():
   else:group_sections='<ul>'+''.join(row(s) for s in selected)+'</ul>'
   faq='<section class="service-questions"><h2>Перед записью</h2>'+''.join(f'<details class="service-question"><summary><h3>{H(q)}</h3></summary><p>{H(a)}</p></details>' for q,a in c['faq'])+'</section>'
   related='<nav class="related-services" aria-label="Другие направления"><h2>Также в студии</h2>'+''.join(f'<a class="text-link" href="/services/{x["slug"]}/">{x["name"]} →</a>' for x in CATEGORIES if x['key']!=c['key'])+'</nav>'
-  main=f'''<main class="subpage container service-page" id="services">{breadcrumbs([('Главная','/'),('Услуги','/services/'),(c['name'],None)])}<header class="service-page-hero"><div><p class="eyebrow">ПРО НЕЁ · ПЕЙЗАЖНАЯ УЛИЦА</p><h1>{c['name']}<br><span>в Санкт-Петербурге</span></h1><p class="service-page-lead">{c['intro']}</p><p class="service-start-price">Разовые процедуры от {money(startprice)}</p>{book()}</div><img src="{c['image']}" width="1254" height="1254" alt="{c['name']}: иллюстрация направления студии" fetchpriority="high"></header><section class="service-price-section"><h2>Процедуры и цены</h2><p class="service-price-note">Цены и длительность из актуального каталога DIKIDI, сверены {verified}. Для курсов показана цена одного сеанса, полная стоимость курса — в названии. Условия и доступное время уточняйте при записи.</p><div class="service-price-list">{group_sections}</div><a class="text-link" href="/prices/">Полный прайс студии →</a></section>{faq}{contact()}{related}</main>'''
+  main=f'''<main class="subpage container service-page" id="services">{breadcrumbs([('Главная','/'),('Услуги','/services/'),(c['name'],None)])}<header class="service-page-hero"><div><p class="eyebrow">ПРО НЕЁ · ПЕЙЗАЖНАЯ УЛИЦА</p><h1>{c['name']}<br><span>в Санкт-Петербурге</span></h1><p class="service-page-lead">{c['intro']}</p><p class="service-start-price">Разовые процедуры от {money(startprice)}</p>{book(url=selected[0]['url'] if len(selected)==1 else None)}</div><img src="{c['image']}" width="1254" height="1254" alt="{c['name']}: иллюстрация направления студии" fetchpriority="high"></header><section class="service-price-section"><h2>Процедуры и цены</h2><p class="service-price-note">Цены и длительность из актуального каталога DIKIDI, сверены {verified}. Для курсов показана цена одного сеанса, полная стоимость курса — в названии. Условия и доступное время уточняйте при записи.</p><div class="service-price-list">{group_sections}</div><a class="text-link" href="/prices/">Полный прайс студии →</a></section>{faq}{contact()}{related}</main>'''
   service={'@type':'Service','@id':absurl(path)+'#service','name':c['name'],'serviceType':c['name'],'description':c['intro'],'url':absurl(path),'image':absurl(c['image']),'provider':{'@id':base+'/#studio'},'areaServed':{'@type':'City','name':cfg['city']},'hasOfferCatalog':{'@type':'OfferCatalog','name':'Процедуры: '+c['name'],'itemListElement':[offer(s) for s in selected]}}
   save_page(path,shell(main),f'{c["name"]} в Санкт-Петербурге, цены — Про НЕЁ',f'{c["name"]} в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от {money(startprice)}. Процедуры, длительность и онлайн-запись в DIKIDI.',[('Главная','/'),('Услуги','/services/'),(c['name'],None)],image=c['image'],business=True,extra=[service])
  # Drafts never become Article markup or sitemap entries; actual publication is explicit and validated.
@@ -186,7 +190,7 @@ def main():
  main='<main class="subpage container"><div class="subpage-heading"><p class="eyebrow">ПРО НЕЁ</p><h1>Страница не найдена.</h1><p>Перейдите на главную или выберите нужную услугу.</p></div><div class="location-actions"><a class="button" href="/">На главную</a><a class="text-link" href="/services/">Услуги студии →</a></div></main>'
  save_page('/404.html',shell(main),'Страница не найдена — Про НЕЁ','Страница не найдена. Услуги и запись в студию Про НЕЁ.',[],index=False)
  # Regenerate modal prices from the same catalog, not a second hand-maintained list.
- js=(d/'app.js').read_text();payload={c['key']:{'title':c['name'],'description':c['intro'],'anchor':c['groups'][0],'url':'/services/'+c['slug']+'/','items':[{'name':byid[i]['display_name'],'price':byid[i]['price_rub'],'duration':str(byid[i]['duration_minutes'])+' мин'} for i in c['ids']]} for c in CATEGORIES}
+ js=(d/'app.js').read_text();payload={c['key']:{'title':c['name'],'description':c['intro'],'anchor':c['groups'][0],'url':'/services/'+c['slug']+'/','booking_url':byid[c['ids'][0]]['url'] if len(category_items(c))==1 else cfg['booking_url'],'items':[{'name':byid[i]['display_name'],'price':byid[i]['price_rub'],'duration':str(byid[i]['duration_minutes'])+' мин'} for i in c['ids']]} for c in CATEGORIES}
  js=re.sub(r'const services=.*?;\nconst serviceDialog=',lambda m:'const services='+safe_script(payload)+';\nconst serviceDialog=',js,count=1,flags=re.S)
  js=js.replace("document.querySelectorAll('[data-service]').forEach(button=>button.addEventListener('click',()=>{","document.querySelectorAll('[data-service]').forEach(button=>button.addEventListener('click',event=>{\n if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||event.button!==0)return;\n event.preventDefault();")
  if "getElementById('service-page-link').href" not in js:js=js.replace("const service=services[button.dataset.service];","const service=services[button.dataset.service];\n document.getElementById('service-page-link').href=service.url;")

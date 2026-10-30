@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-30",
+  "sources": [
+    "https://yandex.com/maps/org/pro_neyo/174748430473/reviews/",
+    "https://dikidi.net/ru/profile/pro_neyo_738151/reviews"
+  ],
+  "booking_urls": [
+    "https://dikidi.net/ru/profile/pro_neyo_738151/service/22050755",
+    "https://dikidi.net/ru/profile/pro_neyo_738151/service/22394769"
+  ],
+  "image": {
+    "reference": "roller-editorial-v5.webp",
+    "result": "roller-together-close-v9.webp",
+    "latest_direction": "The user requested both legs immediately next to one another in the same position; retain the approved close-up angle.",
+    "final_prompt": "Edit this professional beauty salon treatment photograph. Keep the same close camera angle, roller massage device, therapist's black gloves, warm lighting, cream couch and berry uniform. Correct the resting client's leg position: both legs are straight, parallel, aligned and immediately next to each other on the couch. Place the second leg alongside the leg being treated, with no large gap between them. They belong to the same adult client and have matching proportions and realistic anatomy. Both extend diagonally through the image in the same direction. Retain the original close crop and all equipment details. Commercial wellness photography.",
+    "prompt": "Precisely edit ONLY the distant leg without the roller, at the right side of this close-up photograph. Keep the exact approved camera angle, zoom, framing, foreground leg, applicator, hands, towels, lighting and colors unchanged.\nThe visible part of the distant leg should be an ordinary MID-THIGH section, just like the approved foreground thigh. Give it a smooth, continuous natural contour and the same healthy soft-tissue proportions as the foreground thigh, slightly smaller because it is farther away. It rests straight and parallel alongside the foreground leg on the same bed. Its knee belongs FURTHER TO THE RIGHT, OUTSIDE THIS CLOSE CROP. Within the visible area, the thigh should taper gently and continuously toward the right edge. Remove the artificial localized hump/raised joint currently near the right edge; reconstruct that small region as a smooth normal thigh transitioning continuously out of frame, rather than a bent knee. Retain real skin texture and normal photographic shadows, not blur or smoothing filters. Both visible thighs must appear to belong to the same adult woman with matching anatomy. Do not change the foreground thigh at all. No wider shot, no new visible feet, no crop change, no changes to the roller or main working action. Landscape 4:3.",
+    "pending_identity_edit": "The consultation article photo awaits additional reference photos promised by the user; its composition and current file are unchanged."
+  }
+}
