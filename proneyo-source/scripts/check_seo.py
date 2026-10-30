@@ -54,7 +54,13 @@ def validate(root):
   for sc in s.schemas:
    expect(sc.get('@context')=='https://schema.org',route+': context')
    raw=json.dumps(sc,ensure_ascii=False)
-   expect('AggregateRating' not in raw and 'FAQPage' not in raw,route+': inappropriate ratings/FAQ schema')
+   expect('AggregateRating' not in raw,route+': self-hosted review rating schema')
+   faq_nodes=[n for n in sc.get('@graph',[]) if n.get('@type')=='FAQPage']
+   if faq_nodes:
+    faq=json.loads((d/'content/faq.json').read_text())
+    expected_faq=[{'@type':'Question','name':x['question'],'acceptedAnswer':{'@type':'Answer','text':x['answer']}} for x in faq]
+    expect(route=='/' and len(faq_nodes)==1 and faq_nodes[0].get('mainEntity')==expected_faq,route+': FAQ schema differs from content')
+    expect(all(x['question'] in t and x['answer'] in t for x in faq),route+': FAQ answers missing from visible HTML')
    if route.startswith('/articles/') and not meta['indexable']:expect('BlogPosting' not in raw and '"@type": "Article"' not in raw,route+': draft Article markup')
    for node in sc.get('@graph',[]):
     if node.get('@type')=='OfferCatalog':offers+=len(node.get('itemListElement',[])) if route=='/prices/' else 0

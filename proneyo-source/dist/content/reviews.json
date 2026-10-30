@@ -6,17 +6,27 @@
     {
       "author": "Надежда Попова",
       "quote": "Мастер просто супер!!! Всё подробно объяснит!",
-      "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/"
+      "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/",
+      "rating": 5,
+      "published_at": "2026-06-20",
+      "date_label": "20 июня 2026"
     },
     {
       "author": "Ольга Ж.",
       "quote": "Прекрасный косметолог! Всё объяснила по ходу процедуры",
-      "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/"
+      "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/",
+      "rating": 5,
+      "published_at": "2026-04-04",
+      "date_label": "4 апреля 2026"
     },
     {
       "author": "Светлана С.",
       "quote": "Результатом осталась очень довольна",
-      "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/"
+      "source_url": "https://yandex.ru/maps/org/pro_neyo/174748430473/reviews/",
+      "rating": 5,
+      "published_at": "2026-06-09",
+      "date_label": "9 июня 2026"
     }
-  ]
+  ],
+  "rating_widget_url": "https://yandex.ru/sprav/widget/rating-badge/174748430473?type=rating"
 }

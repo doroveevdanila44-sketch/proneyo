@@ -9,6 +9,7 @@
       "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BeautySalon",
+        "FAQPage",
         "WebPage",
         "WebSite"
       ],
@@ -152,7 +153,7 @@
       "title": "Почему целлюлит не равен лишнему весу — Про НЕЁ",
       "description": "Рельеф кожи и объём тела зависят от разных факторов. Разбираемся, почему для них нужны разные подходы.",
       "indexable": true,
-      "image": "/assets/article-cellulite-real-v3.webp",
+      "image": "/assets/article-cellulite-editorial-v5.webp",
       "schema_types": [
         "BlogPosting",
         "BreadcrumbList",
@@ -166,7 +167,7 @@
       "title": "Пять вопросов перед курсом процедур — Про НЕЁ",
       "description": "Что уточнить на консультации, чтобы понимать цель, ограничения и полную стоимость программы.",
       "indexable": true,
-      "image": "/assets/article-consultation-real-v3.webp",
+      "image": "/assets/article-consultation-editorial-v5.webp",
       "schema_types": [
         "BlogPosting",
         "BreadcrumbList",
@@ -180,7 +181,7 @@
       "title": "Домашний уход между процедурами: с чего начать — Про НЕЁ",
       "description": "Мягкое очищение, увлажнение и защита от солнца. Что действительно нужно коже каждый день.",
       "indexable": true,
-      "image": "/assets/article-homecare-real-v3.webp",
+      "image": "/assets/article-homecare-editorial-v5.webp",
       "schema_types": [
         "BlogPosting",
         "BreadcrumbList",
@@ -205,5 +206,5 @@
   "sitemap_entries": 13,
   "published_articles": 3,
   "procedure_records": 70,
-  "cache": "e97ebcbdff78"
+  "cache": "18bb4a19f09f"
 }

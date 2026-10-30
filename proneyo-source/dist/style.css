@@ -449,20 +449,59 @@ html{background:#fbf7f1;color-scheme:light}
 }
 @media(max-width:360px){.studio-experience .experience-value{font-size:58px}.studio-experience .experience-statement{font-size:12px}}
 
-/* The restored LED photograph keeps the original body position and full frame. */
-.procedure-feature-led .procedure-photo{aspect-ratio:2/3;max-width:400px;justify-self:center;width:100%}
-.procedure-feature-led .procedure-photo img{object-fit:contain}
-.membership-description{font-size:14px;line-height:1.7;margin:20px 0 26px}
-.review-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;background:#fffaf5;padding:26px 30px 28px;border-radius:var(--radius);box-shadow:0 9px 30px rgba(95,61,54,.055)}
-.review-card blockquote{margin:12px 0 28px;font-family:var(--serif);font-size:26px;line-height:1.4;color:var(--ink)}
-.review-author{font-size:13px;font-weight:500;color:var(--berry);margin-top:auto}
-.review-source{font-size:10px;color:var(--body);line-height:1.6;border-bottom:1px solid var(--line);padding-bottom:4px;margin-top:9px}
-.review-source:hover{color:var(--berry)}
-@media(max-width:760px){.procedure-feature-led .procedure-photo{max-width:400px}.review-card{padding:24px}.review-card blockquote{font-size:25px}.membership-description{font-size:13px}}
 
-/* Keep the real camera angles and portrait framing from the supplied photos. */
-.procedure-feature-roller .procedure-photo{aspect-ratio:1038/1516;width:100%;max-width:400px;justify-self:center}
-.procedure-feature-local .procedure-photo{aspect-ratio:4/3}
-.procedure-feature-roller .procedure-photo img,.procedure-feature-local .procedure-photo img{object-fit:contain}
-.article-card-photo{aspect-ratio:3/4}
-.article-hero-image{width:auto;height:auto;max-width:100%;max-height:700px;object-fit:contain;margin-inline:auto}
+/* One photographic format, with no letterboxing or conflicting portrait frames. */
+.procedure-features{padding-top:16px}
+.procedure-intro{margin-bottom:28px}
+.procedure-feature{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,72px);margin-top:72px}
+.procedure-photo{width:100%;aspect-ratio:4/3;max-width:none;justify-self:stretch;background:transparent;border-radius:4px}
+.procedure-photo img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover}
+.procedure-copy h2{font-size:clamp(32px,3.4vw,48px);line-height:1.12;letter-spacing:-1.2px;margin-bottom:24px}
+.procedure-copy>p:not(.eyebrow){line-height:1.8;max-width:470px}
+.procedure-actions{margin-top:24px}
+.procedure-price-source{display:inline-block;margin-top:7px;font-size:10px;color:var(--body);text-decoration:underline;text-underline-offset:3px}
+.article-card-photo{aspect-ratio:4/3;margin-bottom:22px}
+.article-card-photo img{aspect-ratio:4/3;object-fit:cover}
+.article-hero-image{display:block;width:100%;height:auto;max-height:none;aspect-ratio:4/3;object-fit:cover;margin-bottom:32px}
+.article-category{display:none}
+.membership-description{font-size:14px;line-height:1.7;margin:20px 0 26px}
+.loyalty-copy h2{font-size:clamp(40px,4vw,58px);line-height:1.1;letter-spacing:-1.5px}
+.loyalty-copy h2 em{display:inline}
+.loyalty-amount{white-space:nowrap}
+.loyalty-copy .app-lead{font:15px/1.7 var(--sans);margin-top:22px}
+.loyalty-benefits{list-style:none;margin:24px 0 28px;padding:0;display:grid;gap:12px;color:var(--body);font-size:13px}
+.loyalty-benefits li{display:flex;align-items:center;gap:12px}
+.loyalty-benefits li::before{content:'+';color:var(--berry);font-size:17px}
+.loyalty-instruction{font-size:12px;line-height:1.7;color:var(--body);margin-top:15px}
+.loyalty-terms{margin-top:20px;max-width:440px;color:var(--body);font-size:11px;line-height:1.8}
+.loyalty-terms summary{cursor:pointer;color:var(--berry);text-decoration:underline;text-underline-offset:4px}
+.loyalty-terms p{margin-top:12px}
+.reviews-heading{align-items:center}
+.yandex-rating-link{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.yandex-rating-link>a{font-size:11px;color:var(--body);text-decoration:underline;text-underline-offset:4px}
+.yandex-rating-badge{display:block;border:0;flex:0 0 150px;width:150px;height:50px}
+.yandex-review{display:flex;flex-direction:column;min-width:0;min-height:260px;border:1px solid #e7e7e7;border-radius:16px;background:#fff;padding:24px;color:#222;box-shadow:0 4px 16px #00000004}
+.yandex-review-head{display:flex;align-items:center;gap:12px;min-width:0;min-height:46px}
+.yandex-avatar{display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;border-radius:50%;background:#eee9e6;color:#705c54;font:500 13px/1 var(--sans)}
+.yandex-author{font:600 14px/1.4 var(--sans);color:#222}
+.yandex-review-date{font:11px/1.5 var(--sans);color:#888;margin-top:3px}
+.yandex-mark{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#fc3f1d;color:#fff;font:500 20px/1 Arial,sans-serif;margin-left:auto;flex-shrink:0}
+.yandex-stars{font:20px/1 var(--sans);letter-spacing:1px;color:#ffb800;margin-top:22px}
+.yandex-review blockquote{margin:16px 0 24px;font:15px/1.65 var(--sans);color:#333}
+.yandex-review-link{font-size:11px;color:#555;text-decoration:underline;text-underline-offset:3px;margin-top:auto}
+.yandex-excerpt-note{font-size:10px;color:#999;margin-top:8px}
+.faq-section{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:70px;padding-top:24px}
+.faq-heading .eyebrow{margin-bottom:18px}
+.faq-heading h2{font-size:clamp(36px,4vw,52px)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-item summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:23px 0;cursor:pointer}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary h3{font:400 22px/1.35 var(--serif);letter-spacing:-.3px}
+.faq-item summary>span{font-size:24px;font-weight:300;color:var(--berry);line-height:1;transition:transform .15s}
+.faq-item[open] summary>span{transform:rotate(45deg)}
+.faq-answer{padding-bottom:24px;font-size:13px;line-height:1.85;color:var(--body)}
+.faq-answer .text-link{margin-top:12px;font-size:11px}
+@media(max-width:1024px){.procedure-feature{gap:30px}.procedure-copy h2{font-size:34px}.procedure-copy>p:not(.eyebrow){font-size:13px}.faq-section{gap:35px}.yandex-review{padding:20px}.yandex-author{font-size:13px}.yandex-review-head{gap:9px}.yandex-avatar{width:34px;height:34px;flex-basis:34px}.yandex-mark{width:24px;height:24px;font-size:17px}.yandex-review-link{font-size:10px}}
+@media(max-width:760px){.procedure-features{padding-top:0}.procedure-intro{margin-bottom:22px}.procedure-feature{grid-template-columns:minmax(0,1fr);gap:25px;margin-top:52px}.procedure-feature-reverse .procedure-photo,.procedure-feature-reverse .procedure-copy{grid-column:auto;grid-row:auto}.procedure-copy h2{font-size:36px;margin-bottom:20px}.procedure-copy>p:not(.eyebrow){font-size:13px}.procedure-copy{padding:0}.procedure-photo{width:100%;max-width:none}.loyalty-copy h2{font-size:42px}.loyalty-copy .app-lead{font-size:14px}.reviews-heading{align-items:flex-start;flex-direction:column;gap:20px}.yandex-rating-link{gap:12px}.yandex-review{min-height:240px;padding:22px}.yandex-author{font-size:14px}.yandex-review-link{font-size:11px}.reviews-grid{gap:16px}.faq-section{grid-template-columns:1fr;gap:30px;padding-top:24px}.faq-heading h2{font-size:36px}.faq-item summary h3{font-size:22px}.faq-item summary{padding:21px 0}.article-card-photo{aspect-ratio:4/3}.membership-description{font-size:13px}}
+@media(max-width:360px){.procedure-copy h2{font-size:31px}.loyalty-copy h2{font-size:36px}.faq-item summary h3{font-size:20px}.yandex-rating-link>a{font-size:10px}.yandex-author{font-size:13px}.yandex-review{padding:18px}.yandex-avatar{width:32px;height:32px;flex-basis:32px}.yandex-mark{width:24px;height:24px;font-size:17px}}

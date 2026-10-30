@@ -1,0 +1,42 @@
+{
+  "tool": "Built-in ImageGen",
+  "direction": "New photographic viewpoints, soft cinematic light, cream/beige and muted berry palette, 4:3 landscape; recognizable people and actual apparatus; no flowers or invented props.",
+  "images": [
+    {
+      "key": "roller-editorial",
+      "reference": "IMG_1053.jpeg",
+      "prompt": "Reference is the actual roller massage applicator and treatment action. Rephotograph the same treatment from a professional low three-quarter side viewpoint at treatment-bed height, not the existing overhead phone angle. Tight landscape close-up: the grey rectangular housing with rows of metallic gold spherical rollers is in correct physical contact with the outer thigh of an adult woman, and the practitioner's one black-gloved hand naturally holds the handle. The thigh runs diagonally through the composition; white towel covers the rest of the patient. The roller contact and hand are crisp, cream bed linen and a small dusty-rose textile edge softly recede out of focus. 85mm portrait lens, believable shallow depth of field, balanced negative space rather than an extreme macro. Preserve the mechanical construction; no hovering device or detached hand.",
+      "output": "/workspace/scratch/9682b88eae33/generated_images/exec-88cc879a-e55d-4c2f-a9cc-f87d19a78a3a.png"
+    },
+    {
+      "key": "local-editorial",
+      "reference": "IMG_1018.jpeg",
+      "prompt": "Reference is the actual brunette practitioner, adult client and body contouring machine. Make a new professional medium close photograph from a three-quarter side angle at the height of the treatment couch. Frame the practitioner from waist to head, the client's relaxed profile and naturally supported head/shoulders, both black-gloved hands and the exact white-and-black treatment applicator resting on the abdomen. The working contact is the visual centre. The device screen and column can be softly visible at the far edge; crop out the uninteresting high wall and old wall lettering through the new camera framing. Keep the practitioner's face recognizable, hair and white coat; preserve the client's face, normal neck and body proportions and towel coverage. Natural quiet concentration, not looking at camera. 70mm lens f/2.8, gentle separation of subjects from the actual simple clinical wall. This is a new photoshoot composition, not just sharpening or a crop of the old photograph.",
+      "output": "/workspace/scratch/9682b88eae33/generated_images/exec-5d3dbbf8-6ffe-47b7-9dde-a21df309037a.png"
+    },
+    {
+      "key": "led-editorial",
+      "reference": "IMG_1026.jpeg",
+      "prompt": "Reference is the same adult woman with dark protective goggles under the actual white LED canopy. Rephotograph this real treatment from a graceful three-quarter SIDE viewpoint, camera at her face height along the side of the couch, not looking down the length of her chest. Landscape head-and-shoulders composition. Her head rests fully on a pillow, neck is short and natural, BOTH shoulders and upper back lie flat on the same mattress plane. A white towel covers her chest. Preserve facial identity and protective goggles, actual canopy structure and red LEDs. The canopy arches visibly above the face with physically plausible clearance and does not intersect the head. Soft warm neutral fill light on skin balances a subtle red glow from the device; do not flood the whole frame orange. Background a softly blurred cream wall with only a restrained berry textile accent. 85mm lens, elegant close photographic framing, real skin.",
+      "output": "/workspace/scratch/9682b88eae33/generated_images/exec-6612c8e8-a764-4fc9-a95b-9919c85eb008.png"
+    },
+    {
+      "key": "article-cellulite-editorial",
+      "reference": "IMG_1053.jpeg",
+      "prompt": "Create a DIFFERENT informational article cover inspired by the real adult body and clinical fabrics in the reference. Do not show an applicator or a massage treatment. A natural close photographic study of an adult woman's hand resting lightly on the outside of her own thigh as she sits on the edge of a treatment couch, with modest white towel coverage. Side three-quarter viewpoint at thigh height, relaxed fingers with correct anatomy, realistic skin texture, subtle normal unevenness rather than exaggerated dimples or a before/after claim. A visual about understanding skin texture. Focus on hand and skin, soft clinic linen in background. No face, no nudity, no beauty ideal body reshaping. 85mm lens. Must be visually distinct from the procedure photos.",
+      "output": "/workspace/scratch/9682b88eae33/generated_images/exec-f821a2ba-1acb-4393-adab-711f7a608c8c.png"
+    },
+    {
+      "key": "article-consultation-editorial",
+      "reference": "IMG_1057.jpeg",
+      "prompt": "Reference gives the identity of the actual brunette practitioner in a white coat at her desk. Create a new intimate professional consultation photograph from eye level across the desk, a natural three-quarter portrait, not an overhead wide-angle view. Frame her upper body, recognizable face in profile-three-quarter, both normal hands, blue pen and a small part of the paper at the bottom of the frame. She has paused writing to listen thoughtfully to a client just outside the frame, no extra person needs to be shown. Make the scene feel alive, unforced and candid during a real consultation. Her face and hand are in focus; the real pale marble clinic wall is gently blurred. Do not show a huge blank upper wall or empty floor, do not invent readable medical records. 70mm portrait lens f/2.8.",
+      "output": "/workspace/scratch/9682b88eae33/generated_images/exec-2f92c0bf-cf7e-4c7f-b422-e3fa223e3509.png"
+    },
+    {
+      "key": "article-homecare-editorial",
+      "reference": "05FBCCA7-E7F3-4F3C-AA6E-2785B622C04F.jpeg",
+      "prompt": "Use the reference only for the real cream-colored professional skincare packaging and clinic context. Create a new lively editorial close-up of adult female hands dispensing a small amount of moisturizing cream from a simple white pump into the other palm on a warm ivory work surface. A soft-focus cream tube from the reference can sit at the edge, but the human hands and small cream texture are the subject, not a product catalogue still life. Camera low three-quarter angle, 85mm lens, realistic fingers, fine skin lines and tiny imperfections. Warm side light and a very subtle dusty-rose linen edge harmonize with the website. Crop packaging labels out of readable view; no invented brand letters. No canopy filling the frame, no busy open drawers, no perfect pedestal arrangement. A distinct photograph about everyday skincare.",
+      "output": "/workspace/scratch/9682b88eae33/generated_images/exec-f8a10035-8914-4c1c-b688-6b98de405f60.png"
+    }
+  ]
+}

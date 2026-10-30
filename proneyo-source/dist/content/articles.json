@@ -3,8 +3,8 @@
     "slug": "cellyulit-i-zhirovye-otlozheniya",
     "title": "Почему целлюлит не равен лишнему весу",
     "summary": "Рельеф кожи и объём тела зависят от разных факторов. Разбираемся, почему для них нужны разные подходы.",
-    "image": "/assets/article-cellulite-real-v3.webp",
-    "image_alt": "Аппаратная насадка на коже живота во время процедуры",
+    "image": "/assets/article-cellulite-editorial-v5.webp",
+    "image_alt": "Рука на коже бедра: иллюстрация материала о рельефе кожи",
     "sections": [
       {
         "heading": "Неровности бывают и у стройных людей",
@@ -57,16 +57,16 @@
       "url": "/#specialists"
     },
     "published_at": "2026-10-30T15:32:14+03:00",
-    "updated_at": "2026-10-30T15:32:14+03:00",
-    "image_width": 1122,
-    "image_height": 1402
+    "updated_at": "2026-10-30T19:12:33+03:00",
+    "image_width": 1448,
+    "image_height": 1086
   },
   {
     "slug": "voprosy-pered-kursom-procedur",
     "title": "Пять вопросов перед курсом процедур",
     "summary": "Что уточнить на консультации, чтобы понимать цель, ограничения и полную стоимость программы.",
-    "image": "/assets/article-consultation-real-v3.webp",
-    "image_alt": "Специалист записывает информацию за рабочим столом",
+    "image": "/assets/article-consultation-editorial-v5.webp",
+    "image_alt": "Специалист за столом во время консультации",
     "sections": [
       {
         "heading": "Какой результат мы хотим получить?",
@@ -122,16 +122,16 @@
       "url": "/#specialists"
     },
     "published_at": "2026-10-30T15:32:14+03:00",
-    "updated_at": "2026-10-30T15:32:14+03:00",
-    "image_width": 1085,
-    "image_height": 1449
+    "updated_at": "2026-10-30T19:12:33+03:00",
+    "image_width": 1448,
+    "image_height": 1086
   },
   {
     "slug": "domashniy-uhod-mezhdu-procedurami",
     "title": "Домашний уход между процедурами: с чего начать",
     "summary": "Мягкое очищение, увлажнение и защита от солнца. Что действительно нужно коже каждый день.",
-    "image": "/assets/article-homecare-real-v3.webp",
-    "image_alt": "Косметические средства на рабочей поверхности в кабинете",
+    "image": "/assets/article-homecare-editorial-v5.webp",
+    "image_alt": "Нанесение крема на ладонь: иллюстрация домашнего ухода",
     "sections": [
       {
         "heading": "Сначала понятная основа",
@@ -184,8 +184,8 @@
       "url": "/#specialists"
     },
     "published_at": "2026-10-30T15:32:14+03:00",
-    "updated_at": "2026-10-30T15:32:14+03:00",
-    "image_width": 1086,
-    "image_height": 1448
+    "updated_at": "2026-10-30T19:12:33+03:00",
+    "image_width": 1448,
+    "image_height": 1086
   }
 ]

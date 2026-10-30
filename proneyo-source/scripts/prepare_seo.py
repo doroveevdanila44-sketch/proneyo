@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlsplit
 import argparse, hashlib, html, json, re
 import xml.etree.ElementTree as ET
+from studio_sections import loyalty_copy, review_cards, faq_section, faq_schema
 
 ROOT=Path(__file__).resolve().parents[1]
 H=html.escape
@@ -22,7 +23,7 @@ CATEGORIES=[
  {'key':'massage','slug':'massazh','name':'Массаж','groups':['massage'],'image':'/assets/service-massage-square-v1.webp','note':'Лицо, спина и всё тело','intro':'Массаж лица и тела в Санкт-Петербурге, на Пейзажной улице. Можно выбрать общий оздоровительный массаж или отдельную зону: спину, голову, ноги, лицо, шею и декольте. В каталоге также есть роликовый массаж лица и программа «Перезагрузка. Тело + Энергия».','ids':['22993821','22993786','22993830','6780931','23134721','23206488','22989545','22054082'],'faq':[('Можно ли записаться только на одну зону?','Да. В каталоге есть отдельные варианты для спины, головы и ног, а также массаж лица, шеи и декольте. Длительность конкретного сеанса указана в прайсе.'),('Есть ли абонементы на массаж?','В каталоге есть курсы массажа спины, лица с шейно-воротниковой зоной и головой, антицеллюлитного и роликового массажа лица. Для курсов отдельно указаны стоимость сеанса и полная стоимость курса.')]},
  {'key':'spa','slug':'spa-uhod','name':'SPA-уход','groups':['spa'],'image':'/assets/service-spa-square-v1.webp','note':'LED-маска и гидролат розы','intro':'SPA-уход для лица с LED-маской и гидролатом розы в студии «Про НЕЁ». Это отдельная процедура в актуальном каталоге DIKIDI: 30 минут, стоимость 1 200 ₽.','ids':['22394769'],'faq':[('Какой SPA-уход доступен?','В актуальном каталоге указана одна отдельная SPA-процедура: уход с LED-маской и гидролатом розы.'),('Сколько длится процедура и сколько стоит?','В каталоге студии указаны 30 минут и 1 200 ₽. Доступное время записи открывается в DIKIDI.')]},
  {'key':'body','slug':'korrekciya-figury','name':'Коррекция фигуры','groups':['body'],'image':'/assets/service-body-square-v1.webp','note':'Массаж и аппаратные процедуры','intro':'Уход за телом и аппаратные процедуры в студии «Про НЕЁ» на Пейзажной улице: роликовый массаж, аппаратный уход и коррекция локальных жировых отложений. В прайсе отдельно показаны разовые процедуры и варианты курсов.','ids':['22050755','22054234','22054272','22054203','22054158'],'faq':[('Можно ли выбрать разовый сеанс?','Да. Для роликового массажа, RF-лифтинга, кавитации и лазерного липолиза есть разовые варианты. Подробности коррекции локальных жировых отложений уточняйте по телефону.'),('Как читать цены на курсы?','У курса полная стоимость указана в названии, а в колонке цены — стоимость одного сеанса в курсе. Эта цена не означает стоимость всего курса.')]},
- {'key':'children','slug':'detskiy-massazh','name':'Детский массаж','groups':['children'],'image':'/assets/service-children-square-v1.webp','note':'Общий массаж и шейно-воротниковая зона','intro':'Детский массаж в студии «Про НЕЁ» в Санкт-Петербурге, на Пейзажной улице. В каталоге есть два варианта: детский массаж на 30 минут и массаж шейно-воротниковой зоны на 20 минут.','ids':['22993900','23723992'],'faq':[('Какие варианты детского массажа доступны?','В записи есть детский массаж длительностью 30 минут и детский массаж шейно-воротниковой зоны длительностью 20 минут.'),('Сколько стоит сеанс?','Оба варианта стоят по 1 200 ₽ согласно актуальному каталогу DIKIDI. Вопросы о возрасте ребёнка и выборе процедуры уточните у специалиста до записи.')]},
+ {'key':'children','slug':'detskiy-massazh','name':'Детский массаж','groups':['children'],'image':'/assets/service-children-square-v1.webp','note':'Общий массаж и шейно-воротниковая зона','intro':'Детский массаж в студии «Про НЕЁ» в Санкт-Петербурге, на Пейзажной улице. В каталоге есть два варианта: детский массаж на 30 минут и массаж шейно-воротниковой зоны на 20 минут.','ids':['22993900','23723992'],'faq':[('Какие варианты детского массажа доступны?','В записи есть детский массаж длительностью 30 минут и детский массаж шейно-воротниковой зоны длительностью 20 минут.'),('Сколько стоит сеанс?','Детский массаж на 30 минут стоит 1 450 ₽, массаж шейно-воротниковой зоны на 20 минут стоит 1 200 ₽. Вопросы о возрасте ребёнка и выборе процедуры уточните у специалиста до записи.')]},
  {'key':'details','slug':'depilyaciya-i-pirsing','name':'Депиляция и пирсинг','groups':['depilation','piercing'],'image':'/assets/service-details-square-v1.webp','note':'Депиляция лица и пирсинг ушей','intro':'Восковая депиляция лица и пирсинг ушей в студии «Про НЕЁ». В записи доступны депиляция носа и верхней губы, пирсинг мочки и хряща уха. Ниже — отдельные цены и длительность каждого варианта.','ids':['6792439','6792447','6792061','6792077'],'faq':[('Какие зоны депиляции есть в прайсе?','В текущем каталоге указаны нос и верхняя губа. Стоимость каждой процедуры — 300 ₽, длительность — 15 минут.'),('Какие варианты пирсинга доступны?','Пирсинг мочки уха — 1 500 ₽ и 25 минут; пирсинг хряща уха — 1 500 ₽ и 30 минут. Условия процедуры обсудите со специалистом при записи.')]}]
 PRICE_GROUPS=[('cosmetology','Косметология','Чистки, пилинги и уход за кожей'),('massage','Массаж','Для лица и тела · разовые сеансы и курсы'),('children','Детский массаж','Общий массаж и шейно-воротниковая зона'),('spa','SPA','Уход с LED-маской и гидролатом розы'),('body','Коррекция фигуры','Роликовый массаж и аппаратные процедуры'),('depilation','Депиляция','Восковая депиляция лица'),('piercing','Пирсинг','Мочка и хрящ уха'),('other','Консультация и другие услуги','Консультация, тейпирование и варианты записи')]
 FACE_CATS=['Чистки','Пилинги','Уходовые процедуры','Гиалуронопластика','Ревитализация']
@@ -39,6 +40,9 @@ def main():
  catalog=read_json(d/'content/prices.json');items=catalog['items'];byid={x['id']:x for x in items}
  verified=datetime.fromisoformat(catalog['verified_at']).strftime('%d.%m.%Y')
  articles=read_json(d/'content/articles.json');published=[]
+ loyalty=read_json(d/'content/loyalty.json') if (d/'content/loyalty.json').exists() else None
+ reviews=read_json(d/'content/reviews.json') if (d/'content/reviews.json').exists() else None
+ home_faq=read_json(d/'content/faq.json') if (d/'content/faq.json').exists() else []
  for a in articles:
   if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',a['slug']):raise ValueError('Invalid article slug')
   if a['status']=='published':
@@ -126,7 +130,19 @@ def main():
  # The main services action goes straight to the full price list.
  t=t.replace('href="/services/">Все направления и цены','href="/prices/">Полный прайс-лист',1)
  t=re.sub(r'(id="service-price-link"[^>]*>)[^<]+',r'\1Все услуги и цены ',t)
- save_page('/',t,'Косметология и массаж в Санкт-Петербурге — Про НЕЁ','Косметология, массаж для взрослых и детей, SPA и уход за телом в студии Про НЕЁ. Санкт-Петербург, Пейзажная улица, 4, корпус 3. Цены и запись в DIKIDI.',[('Главная','/')],business=True)
+ def feature_price(match):
+  item=byid[match.group(1)]
+  return f'<p class="procedure-meta" data-catalog-id="{item["id"]}">{item["duration_minutes"]} минут <span>·</span> {money(item["price_rub"])}'+(' за процедуру' if item['id']=='22050755' else '')+'</p>'
+ t=re.sub(r'<p class="procedure-meta" data-catalog-id="(\d+)">.*?</p>',feature_price,t,flags=re.S)
+ if loyalty:
+  t=re.sub(r'<div class="app-copy(?: loyalty-copy)?">.*?(?=<div class="app-art-group">)',lambda m:loyalty_copy(loyalty)+'\n      ',t,count=1,flags=re.S)
+ if reviews:
+  t=re.sub(r'<section class="section reviews-section".*?</section>',lambda m:review_cards(reviews),t,count=1,flags=re.S)
+ if home_faq:
+  rendered_faq=faq_section(home_faq)
+  if 'id="faq"' in t:t=re.sub(r'<section class="section container faq-section".*?</section>',lambda m:rendered_faq,t,count=1,flags=re.S)
+  else:t=t.replace('<section class="section studio-gallery"',rendered_faq+'\n\n    <section class="section studio-gallery"',1)
+ save_page('/',t,'Косметология и массаж в Санкт-Петербурге — Про НЕЁ','Косметология, массаж для взрослых и детей, SPA и уход за телом в студии Про НЕЁ. Санкт-Петербург, Пейзажная улица, 4, корпус 3. Цены и запись в DIKIDI.',[('Главная','/')],business=True,extra=[faq_schema(home_faq,base)] if home_faq else None)
  # Public price selection, generated from the published catalog.
  sections=[]
  for gid,name,note in PRICE_GROUPS:
@@ -153,7 +169,7 @@ def main():
   save_page(path,shell(main),f'{c["name"]} в Санкт-Петербурге, цены — Про НЕЁ',f'{c["name"]} в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от {money(startprice)}. Процедуры, длительность и онлайн-запись в DIKIDI.',[('Главная','/'),('Услуги','/services/'),(c['name'],None)],image=c['image'],business=True,extra=[service])
  # Drafts never become Article markup or sitemap entries; actual publication is explicit and validated.
  dialog='<dialog id="article-soon-dialog" class="dialog" aria-labelledby="article-soon-title"><button class="dialog-close" data-close aria-label="Закрыть">×</button><p class="eyebrow">СТАТЬИ ПРО НЕЁ</p><h2 id="article-soon-title">Статья скоро дополнится.</h2><p class="dialog-description" id="article-soon-subject"></p></dialog>'
- main=f'<main class="subpage container" id="services">{breadcrumbs([("Главная","/"),("Статьи",None)])}<div class="subpage-heading"><p class="eyebrow">НАШИ ЗНАНИЯ — ДЛЯ ВАС</p><h1>Об уходе простыми словами</h1><p class="articles-intro">Как выбрать процедуры, чего ждать от курса и как ухаживать за кожей дома.</p></div><section class="article-list"><h2 class="article-list-label">{"Материалы студии" if published else "Готовим материалы"}</h2>{article_cards()}</section></main>'
+ main=f'<main class="subpage container" id="services">{breadcrumbs([("Главная","/"),("Статьи",None)])}<div class="subpage-heading"><h1>Статьи.</h1></div><section class="article-list"><h2 class="article-list-label">{"Материалы студии" if published else "Готовим материалы"}</h2>{article_cards()}</section></main>'
  save_page('/articles/',shell(main).replace('</body>',dialog+'</body>'),'Об уходе простыми словами — статьи Про НЕЁ','Материалы студии Про НЕЁ об уходе за лицом и телом, косметологии и массаже. Вопросы перед процедурами и понятные объяснения.',[('Главная','/'),('Статьи',None)],index=bool(published),ptype='CollectionPage')
  for a in articles:
   path='/articles/'+a['slug']+'/';ready=a['status']=='published';extra=[]

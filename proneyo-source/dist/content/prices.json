@@ -1,9 +1,9 @@
 {
   "source": "https://dikidi.net/ru/profile/pro_neyo_738151/services",
   "booking_url": "https://dikidi.net/ru/record/738151",
-  "verified_at": "2026-10-22",
+  "verified_at": "2026-10-30",
   "secondary_source": "https://yandex.ru/maps/org/pro_neyo/174748430473/prices/",
-  "pricing_note": "Цены и длительность взяты из текущего каталога DIKIDI. Для курсов указана цена одного сеанса; полная стоимость курса сохранена в названии. Консультация 10 ₽ и запись 10 минут 1 000 ₽ переданы ровно как в DIKIDI.",
+  "pricing_note": "Все 70 опубликованных позиций сверены с каталогом DIKIDI 30.10.2026. Для курсов указана цена одного сеанса, полная стоимость курса сохранена в названии.",
   "items": [
     {
       "id": "22394769",
@@ -202,8 +202,8 @@
       "name": "ДЕТСКИЙ МАССАЖ",
       "category": "Массаж",
       "category_id": "1647967",
-      "price_rub": 1200,
-      "price_display": "1 200 RUB",
+      "price_rub": 1450,
+      "price_display": "1 450 RUB",
       "duration_display": "30 м",
       "duration_minutes": 30,
       "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/22993900",

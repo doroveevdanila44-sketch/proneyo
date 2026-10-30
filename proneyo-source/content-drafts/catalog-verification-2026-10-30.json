@@ -1,0 +1,566 @@
+{
+  "source": "https://dikidi.net/ru/profile/pro_neyo_738151/services",
+  "verified_at": "2026-10-30",
+  "items": [
+    {
+      "id": "22394769",
+      "source_name": "SPA-уход с LED-маской и гидролатом розы",
+      "price_rub": 1200,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1200
+    },
+    {
+      "id": "22396027",
+      "source_name": "Запись 10 минут",
+      "price_rub": 1000,
+      "duration_minutes": 10,
+      "matched": true,
+      "previous_price_rub": 1000
+    },
+    {
+      "id": "6781029",
+      "source_name": "Мануальное ремоделировпние матрикса кожи",
+      "price_rub": 3000,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 3000
+    },
+    {
+      "id": "6781041",
+      "source_name": "Процедура Elastic вокруг глаз",
+      "price_rub": 2100,
+      "duration_minutes": 35,
+      "matched": true,
+      "previous_price_rub": 2100
+    },
+    {
+      "id": "6781033",
+      "source_name": "Экспресс-уход \"Вспышка красоты\" (G-Derm)",
+      "price_rub": 2100,
+      "duration_minutes": 35,
+      "matched": true,
+      "previous_price_rub": 2100
+    },
+    {
+      "id": "6792439",
+      "source_name": "Восковая депиляция нос",
+      "price_rub": 300,
+      "duration_minutes": 15,
+      "matched": true,
+      "previous_price_rub": 300
+    },
+    {
+      "id": "6792447",
+      "source_name": "Восковая депиляция усики",
+      "price_rub": 300,
+      "duration_minutes": 15,
+      "matched": true,
+      "previous_price_rub": 300
+    },
+    {
+      "id": "8042364",
+      "source_name": "Консультация",
+      "price_rub": 10,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 10
+    },
+    {
+      "id": "22993870",
+      "source_name": "Абонемент 7 сеансов АНТИЦЕЛЛЮЛИТНЫЙ МАССАЖ 7 сеансов 12000",
+      "price_rub": 1715,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 1715
+    },
+    {
+      "id": "22993849",
+      "source_name": "Абонемент 7 сеансов Массаж лица +ШВЗ+ голова 7840 сеанс 1120",
+      "price_rub": 1120,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1120
+    },
+    {
+      "id": "22989545",
+      "source_name": "Акция Биоэнергетический массаж (Бесконтактный) скидка 70%",
+      "price_rub": 1500,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 1500
+    },
+    {
+      "id": "22993860",
+      "source_name": "АНТИЦЕЛЛЮЛИТНЫЙ МАССАЖ / ДЛЯ СТРОЙНОГО СИЛУЭТА",
+      "price_rub": 2000,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 2000
+    },
+    {
+      "id": "22993900",
+      "source_name": "ДЕТСКИЙ МАССАЖ",
+      "price_rub": 1450,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1200
+    },
+    {
+      "id": "6780937",
+      "source_name": "Массаж головы",
+      "price_rub": 450,
+      "duration_minutes": 15,
+      "matched": true,
+      "previous_price_rub": 450
+    },
+    {
+      "id": "23723992",
+      "source_name": "Массаж детский ШВЗ",
+      "price_rub": 1200,
+      "duration_minutes": 20,
+      "matched": true,
+      "previous_price_rub": 1200
+    },
+    {
+      "id": "22993830",
+      "source_name": "МАССАЖ ЛИЦА + ШЕЙНО-ВОРОТНИКОВАЯ ЗОНА + ГОЛОВА",
+      "price_rub": 1400,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 1400
+    },
+    {
+      "id": "6780931",
+      "source_name": "Массаж лица шеи и зоны декольте",
+      "price_rub": 1700,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1700
+    },
+    {
+      "id": "23134721",
+      "source_name": "Массаж ног",
+      "price_rub": 1350,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1350
+    },
+    {
+      "id": "22993786",
+      "source_name": "Массаж спины",
+      "price_rub": 1350,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1350
+    },
+    {
+      "id": "22993805",
+      "source_name": "Массаж спины Абонемент 7 сеансов 8100₽ сеанс 1158",
+      "price_rub": 1158,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1158
+    },
+    {
+      "id": "22993821",
+      "source_name": "Общий оздоровительный массаж тела + голова+ лицо",
+      "price_rub": 2500,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 2500
+    },
+    {
+      "id": "23206488",
+      "source_name": "Перезагрузка. Тело + Энергия",
+      "price_rub": 3500,
+      "duration_minutes": 120,
+      "matched": true,
+      "previous_price_rub": 3500
+    },
+    {
+      "id": "6780969",
+      "source_name": "Пилинг BiorepeelCL3",
+      "price_rub": 3500,
+      "duration_minutes": 20,
+      "matched": true,
+      "previous_price_rub": 3500
+    },
+    {
+      "id": "6780939",
+      "source_name": "Пилинг Азелаиновый",
+      "price_rub": 2200,
+      "duration_minutes": 20,
+      "matched": true,
+      "previous_price_rub": 2200
+    },
+    {
+      "id": "6780951",
+      "source_name": "Пилинг Глюконолактоновый",
+      "price_rub": 1900,
+      "duration_minutes": 20,
+      "matched": true,
+      "previous_price_rub": 1900
+    },
+    {
+      "id": "6780957",
+      "source_name": "Пилинг Кераторегулирующий",
+      "price_rub": 2000,
+      "duration_minutes": 20,
+      "matched": true,
+      "previous_price_rub": 2000
+    },
+    {
+      "id": "21678002",
+      "source_name": "Пилинг Модильяни",
+      "price_rub": 2500,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 2500
+    },
+    {
+      "id": "6780943",
+      "source_name": "Пилинг Молочный",
+      "price_rub": 2000,
+      "duration_minutes": 25,
+      "matched": true,
+      "previous_price_rub": 2000
+    },
+    {
+      "id": "6780947",
+      "source_name": "Пилинг Пировиноградный",
+      "price_rub": 2000,
+      "duration_minutes": 25,
+      "matched": true,
+      "previous_price_rub": 2000
+    },
+    {
+      "id": "6780959",
+      "source_name": "Пилинг Фитино-Галловый",
+      "price_rub": 2300,
+      "duration_minutes": 25,
+      "matched": true,
+      "previous_price_rub": 2300
+    },
+    {
+      "id": "6780965",
+      "source_name": "Пилинг Энзимный",
+      "price_rub": 800,
+      "duration_minutes": 25,
+      "matched": true,
+      "previous_price_rub": 800
+    },
+    {
+      "id": "6792061",
+      "source_name": "Пирсинг мочки уха",
+      "price_rub": 1500,
+      "duration_minutes": 25,
+      "matched": true,
+      "previous_price_rub": 1500
+    },
+    {
+      "id": "6792077",
+      "source_name": "Пирсинг хряща уха",
+      "price_rub": 1500,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1500
+    },
+    {
+      "id": "22054234",
+      "source_name": "RF лифтинг тело ( 3-5 процедур 1 раз в неделю) 1 зона 1 сеанс",
+      "price_rub": 1600,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1600
+    },
+    {
+      "id": "22054239",
+      "source_name": "RF лифтинг тело ( 3-5 процедур 1 раз в неделю) 1 зона 3 сеанса 3300",
+      "price_rub": 1100,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1100
+    },
+    {
+      "id": "22054262",
+      "source_name": "RF лифтинг тело ( 3-5 процедур 1 раз в неделю) 1 зона 5 сеансов 5250",
+      "price_rub": 1050,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1050
+    },
+    {
+      "id": "22054272",
+      "source_name": "Кавитация ( 5 процедур 1 раз в неделю) 1 сеанс 1 зона",
+      "price_rub": 1400,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1400
+    },
+    {
+      "id": "22054284",
+      "source_name": "Кавитация ( 5 процедур 1 раз в неделю) 5 сеансов 1 зона 4700",
+      "price_rub": 940,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 940
+    },
+    {
+      "id": "22054158",
+      "source_name": "Криолиполиз 1 насадка за один сеанс",
+      "price_rub": 3000,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 3000
+    },
+    {
+      "id": "22054161",
+      "source_name": "Криолиполиз 2 насадки за один сеанс",
+      "price_rub": 5000,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 5000
+    },
+    {
+      "id": "22054168",
+      "source_name": "Криолиполиз 3 насадки за один сеанс",
+      "price_rub": 6500,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 6500
+    },
+    {
+      "id": "22054178",
+      "source_name": "Криолиполиз 4 насадки за один сеанс",
+      "price_rub": 7500,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 7500
+    },
+    {
+      "id": "22054203",
+      "source_name": "Лазерный липолиз (5-10 процедур 2-3 раза в неделю) 1 процедура",
+      "price_rub": 1200,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 1200
+    },
+    {
+      "id": "22054225",
+      "source_name": "Лазерный липолиз (5-10 процедур 2-3 раза в неделю) абонемент 10 процедур 7500",
+      "price_rub": 750,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 750
+    },
+    {
+      "id": "22054216",
+      "source_name": "Лазерный липолиз (5-10 процедур 2-3 раза в неделю) абонемент 5 процедур 4700",
+      "price_rub": 940,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 940
+    },
+    {
+      "id": "22054114",
+      "source_name": "Роликовый массаж 10 процедур 16500",
+      "price_rub": 1650,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 1650
+    },
+    {
+      "id": "22050767",
+      "source_name": "Роликовый массаж абонемент 5 процедур 8500",
+      "price_rub": 1700,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 1700
+    },
+    {
+      "id": "22054082",
+      "source_name": "Роликовый массаж лица",
+      "price_rub": 1500,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1500
+    },
+    {
+      "id": "22054126",
+      "source_name": "Роликовый массаж лица 10 процедур 11500",
+      "price_rub": 1150,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1150
+    },
+    {
+      "id": "22054098",
+      "source_name": "Роликовый массаж лица 5 процедур 6000",
+      "price_rub": 1200,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1200
+    },
+    {
+      "id": "22050755",
+      "source_name": "Роликовый массаж одна процедура",
+      "price_rub": 2200,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 2200
+    },
+    {
+      "id": "6780915",
+      "source_name": "Карбоксиревитализация",
+      "price_rub": 1800,
+      "duration_minutes": 35,
+      "matched": true,
+      "previous_price_rub": 1800
+    },
+    {
+      "id": "6780983",
+      "source_name": "Тейпирование",
+      "price_rub": 500,
+      "duration_minutes": 15,
+      "matched": true,
+      "previous_price_rub": 500
+    },
+    {
+      "id": "13200980",
+      "source_name": "Relax",
+      "price_rub": 2900,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 2900
+    },
+    {
+      "id": "6781001",
+      "source_name": "Антивозрастной уход",
+      "price_rub": 5000,
+      "duration_minutes": 45,
+      "matched": true,
+      "previous_price_rub": 5000
+    },
+    {
+      "id": "6781015",
+      "source_name": "Дарсонвализация волосы",
+      "price_rub": 500,
+      "duration_minutes": 20,
+      "matched": true,
+      "previous_price_rub": 500
+    },
+    {
+      "id": "6781013",
+      "source_name": "Дарсонвализация лицо",
+      "price_rub": 500,
+      "duration_minutes": 20,
+      "matched": true,
+      "previous_price_rub": 500
+    },
+    {
+      "id": "10257876",
+      "source_name": "Подбор ухода с фаворитами + SPF",
+      "price_rub": 1500,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 1500
+    },
+    {
+      "id": "6780993",
+      "source_name": "Уход Комби/Жирная",
+      "price_rub": 2400,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 2400
+    },
+    {
+      "id": "6781007",
+      "source_name": "Уход Купероз/Розацеа",
+      "price_rub": 2000,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 2000
+    },
+    {
+      "id": "6780989",
+      "source_name": "Уход сухая/нормальная",
+      "price_rub": 2000,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 2000
+    },
+    {
+      "id": "6780997",
+      "source_name": "Уход чувствительная кожа",
+      "price_rub": 2000,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 2000
+    },
+    {
+      "id": "9816652",
+      "source_name": "Фарфоровая куколка",
+      "price_rub": 1700,
+      "duration_minutes": 40,
+      "matched": true,
+      "previous_price_rub": 1700
+    },
+    {
+      "id": "6779055",
+      "source_name": "Атравматичексая чистка",
+      "price_rub": 1800,
+      "duration_minutes": 45,
+      "matched": true,
+      "previous_price_rub": 1800
+    },
+    {
+      "id": "9816624",
+      "source_name": "Кислородная чистка",
+      "price_rub": 3500,
+      "duration_minutes": 45,
+      "matched": true,
+      "previous_price_rub": 3500
+    },
+    {
+      "id": "6780899",
+      "source_name": "Комбинированная чистка",
+      "price_rub": 2500,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 2500
+    },
+    {
+      "id": "6780881",
+      "source_name": "Механическая чистка",
+      "price_rub": 2300,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 2300
+    },
+    {
+      "id": "6779049",
+      "source_name": "Ультразвуковая чистка",
+      "price_rub": 2100,
+      "duration_minutes": 50,
+      "matched": true,
+      "previous_price_rub": 2100
+    },
+    {
+      "id": "10441590",
+      "source_name": "Чистка + пилинг",
+      "price_rub": 4000,
+      "duration_minutes": 60,
+      "matched": true,
+      "previous_price_rub": 4000
+    },
+    {
+      "id": "6780891",
+      "source_name": "Чистка носа",
+      "price_rub": 1100,
+      "duration_minutes": 30,
+      "matched": true,
+      "previous_price_rub": 1100
+    }
+  ]
+}
