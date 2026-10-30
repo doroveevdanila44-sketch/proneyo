@@ -38,22 +38,6 @@
       "site_group": "other"
     },
     {
-      "id": "16579384",
-      "name": "Безиньекционная Биоревитализация губ",
-      "category": "Био/мезо",
-      "category_id": "4047338",
-      "price_rub": 3500,
-      "price_display": "3 500 RUB",
-      "duration_display": "30 м",
-      "duration_minutes": 30,
-      "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/16579384",
-      "image_url": "https://f2.dikidi.net/c28/v27017/34f6uj0ga8.jpg?size=s",
-      "display_name": "Безинъекционная биоревитализация губ",
-      "price_basis": "за процедуру",
-      "duration": "30 мин",
-      "site_group": "cosmetology"
-    },
-    {
       "id": "6781029",
       "name": "Мануальное ремоделировпние матрикса кожи",
       "category": "Гиалуронопластика",
@@ -631,7 +615,7 @@
     },
     {
       "id": "22054158",
-      "name": "Криолиполиз 1 насадка за один сеанс",
+      "name": "Коррекция локальных жировых отложений 1 насадка за один сеанс",
       "category": "Работа с телом",
       "category_id": "5842115",
       "price_rub": 3000,
@@ -640,14 +624,14 @@
       "duration_minutes": 40,
       "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/22054158",
       "image_url": "https://f2.dikidi.net/c28/v27265/5bbtf6mc1i.jpg?size=s",
-      "display_name": "Криолиполиз 1 насадка за один сеанс",
+      "display_name": "Коррекция локальных жировых отложений 1 насадка за один сеанс",
       "price_basis": "за процедуру",
       "duration": "40 мин",
       "site_group": "body"
     },
     {
       "id": "22054161",
-      "name": "Криолиполиз 2 насадки за один сеанс",
+      "name": "Коррекция локальных жировых отложений 2 насадки за один сеанс",
       "category": "Работа с телом",
       "category_id": "5842115",
       "price_rub": 5000,
@@ -656,14 +640,14 @@
       "duration_minutes": 40,
       "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/22054161",
       "image_url": "https://f2.dikidi.net/c28/v27265/711jb7ns70.jpg?size=s",
-      "display_name": "Криолиполиз 2 насадки за один сеанс",
+      "display_name": "Коррекция локальных жировых отложений 2 насадки за один сеанс",
       "price_basis": "за процедуру",
       "duration": "40 мин",
       "site_group": "body"
     },
     {
       "id": "22054168",
-      "name": "Криолиполиз 3 насадки за один сеанс",
+      "name": "Коррекция локальных жировых отложений 3 насадки за один сеанс",
       "category": "Работа с телом",
       "category_id": "5842115",
       "price_rub": 6500,
@@ -672,14 +656,14 @@
       "duration_minutes": 40,
       "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/22054168",
       "image_url": "https://f2.dikidi.net/c28/v27265/368ekmdmio.jpg?size=s",
-      "display_name": "Криолиполиз 3 насадки за один сеанс",
+      "display_name": "Коррекция локальных жировых отложений 3 насадки за один сеанс",
       "price_basis": "за процедуру",
       "duration": "40 мин",
       "site_group": "body"
     },
     {
       "id": "22054178",
-      "name": "Криолиполиз 4 насадки за один сеанс",
+      "name": "Коррекция локальных жировых отложений 4 насадки за один сеанс",
       "category": "Работа с телом",
       "category_id": "5842115",
       "price_rub": 7500,
@@ -688,7 +672,7 @@
       "duration_minutes": 40,
       "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/22054178",
       "image_url": "https://f2.dikidi.net/c28/v27265/5datn77p2m.jpg?size=s",
-      "display_name": "Криолиполиз 4 насадки за один сеанс",
+      "display_name": "Коррекция локальных жировых отложений 4 насадки за один сеанс",
       "price_basis": "за процедуру",
       "duration": "40 мин",
       "site_group": "body"
@@ -836,22 +820,6 @@
       "price_basis": "за процедуру",
       "duration": "60 мин",
       "site_group": "body"
-    },
-    {
-      "id": "6780921",
-      "name": "Биоревитализация безиньекционная",
-      "category": "Ревитализация",
-      "category_id": "1647957",
-      "price_rub": 2000,
-      "price_display": "2 000 RUB",
-      "duration_display": "30 м",
-      "duration_minutes": 30,
-      "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/6780921",
-      "image_url": "/assets/images/new-company-avatar-88.png",
-      "display_name": "Безинъекционная биоревитализация",
-      "price_basis": "за процедуру",
-      "duration": "30 мин",
-      "site_group": "cosmetology"
     },
     {
       "id": "6780915",
@@ -1046,22 +1014,6 @@
       "site_group": "cosmetology"
     },
     {
-      "id": "6780905",
-      "name": "Фракционная мезотерапия",
-      "category": "Фракционная мезотерапия",
-      "category_id": "1647943",
-      "price_rub": 2300,
-      "price_display": "2 300 RUB",
-      "duration_display": "40 м",
-      "duration_minutes": 40,
-      "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/6780905",
-      "image_url": "https://f2.dikidi.net/c28/v27265/62q6v8u29p.jpg?size=s",
-      "display_name": "Фракционная мезотерапия",
-      "price_basis": "за процедуру",
-      "duration": "40 мин",
-      "site_group": "cosmetology"
-    },
-    {
       "id": "6779055",
       "name": "Атравматичексая чистка",
       "category": "Чистки",
@@ -1174,5 +1126,6 @@
       "site_group": "cosmetology"
     }
   ],
-  "rechecked_at": "2026-10-22T10:54:26Z"
+  "rechecked_at": "2026-10-22T10:54:26Z",
+  "publication_note": "На сайте опубликована выборка услуг. Условия остальных процедур уточняйте по телефону студии."
 }

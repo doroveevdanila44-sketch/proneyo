@@ -47,7 +47,7 @@ class Pipeline(unittest.TestCase):
   p.write_text(t)
   self.assertFalse(validate_static(self.root)['passed'])
  def test_unreviewed_article_rejected(self):
-  p=self.root/'dist/content/articles.json';a=json.loads(p.read_text());a[0]['status']='published';p.write_text(json.dumps(a))
+  p=self.root/'dist/content/articles.json';a=json.loads(p.read_text());a[0]['status']='published';a[0].pop('editorial_approved',None);p.write_text(json.dumps(a))
   r=build(self.root);self.assertNotEqual(r.returncode,0);self.assertIn('reviewed content',r.stderr)
  def test_reviewed_article_publishes_visible_text_schema_and_links(self):
   p=self.root/'dist/content/articles.json';a=json.loads(p.read_text());a[0].update(status='published',editorial_approved=True,author={'name':'Тестовый автор','url':'/#specialists'},published_at='2026-10-22T12:00:00+03:00',updated_at='2026-10-22T12:00:00+03:00',sections=[{'heading':'Тест раздела','paragraphs':['Проверка текста <важно> и кавычек «да».']}]);p.write_text(json.dumps(a,ensure_ascii=False))
@@ -56,7 +56,7 @@ class Pipeline(unittest.TestCase):
   self.assertIn('Проверка текста &lt;важно&gt;',page);self.assertIn('BlogPosting',page);self.assertNotIn('Статья скоро дополнится.',page)
   self.assertIn('/articles/'+a[0]['slug']+'/',(self.root/'dist/sitemap.xml').read_text())
   self.assertIn('Читать материал',(self.root/'dist/articles/index.html').read_text())
-  self.assertEqual(json.loads((self.root/'seo-pages.json').read_text())['sitemap_entries'],11)
+  self.assertEqual(json.loads((self.root/'seo-pages.json').read_text())['sitemap_entries'],10+sum(x['status']=='published' for x in a))
   self.assertTrue(validate_static(self.root)['passed'])
  def test_reversed_dates_rejected_across_timezones(self):
   p=self.root/'dist/content/articles.json';a=json.loads(p.read_text());a[0].update(status='published',editorial_approved=True,author={'name':'Тест'},published_at='2026-10-22T12:00:00+03:00',updated_at='2026-10-22T12:30:00+05:00',sections=[{'heading':'Тест','paragraphs':['Текст']}]);p.write_text(json.dumps(a))
