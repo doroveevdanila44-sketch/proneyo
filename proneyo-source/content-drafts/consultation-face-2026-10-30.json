@@ -1,0 +1,15 @@
+{
+  "updated_at": "2026-10-30",
+  "scope": "Only the consultation article photograph's facial identity, using the four user-provided references. Preserve approved camera angle, zoom, head pose, hands, clothing and background.",
+  "method": "Built-in image_gen localized identity edit.",
+  "reference_files": [
+    "IMG_1039.jpeg",
+    "IMG_1038.jpeg",
+    "IMG_1056.jpeg",
+    "IMG_1055.jpeg"
+  ],
+  "primary_identity_reference": "IMG_1038.jpeg",
+  "previous_asset": "dist/assets/article-consultation-editorial-v5.webp",
+  "final_asset": "dist/assets/article-consultation-identity-v6.webp",
+  "prompt": "Use case: identity-preserve, precise localized facial edit.\nImage 1 is the EDIT TARGET: the approved landscape photograph of a cosmetologist seated at a white desk, holding a blue pen, looking to image-left. Images 2–5 are IDENTITY REFERENCES of the same real adult woman, supplied by the user. Image 3 is the clearest close portrait and should be the primary source for facial likeness; the other references confirm her features.\n\nChange ONLY the face in image 1 so it closely resembles the woman in images 2–5. Reproduce her distinctive fuller oval facial proportions, rounded cheeks, dark strongly arched eyebrows, brown eyes, nose shape, full rose-colored lips, jaw and chin. Keep realistic age and individual features; do not substitute a generic model face.\nCrucial: adapt her identity to the EXACT EXISTING three-quarter head angle and gaze toward image-left in image 1. Preserve the attentive, relaxed closed-mouth expression of the target. Do not rotate her head to face the camera and do not import the references' frontal toothy smile.\nLock every other part of image 1: exact 4:3 crop and resolution, camera angle and zoom, head position and scale, hair arrangement, body pose, white coat and folds, both hands and fingers, blue pen, papers, desk, grey chair, marble background, pink rear cushion, lighting and warm color treatment. The approved composition must remain unchanged. Integrate only the facial identity seamlessly with the existing light and hairline, with natural skin texture. No captions, no collage, no extra objects."
+}

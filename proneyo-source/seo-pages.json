@@ -167,7 +167,7 @@
       "title": "Пять вопросов перед курсом процедур — Про НЕЁ",
       "description": "Что уточнить на консультации, чтобы понимать цель, ограничения и полную стоимость программы.",
       "indexable": true,
-      "image": "/assets/article-consultation-editorial-v5.webp",
+      "image": "/assets/article-consultation-identity-v6.webp",
       "schema_types": [
         "BlogPosting",
         "BreadcrumbList",
@@ -206,5 +206,5 @@
   "sitemap_entries": 13,
   "published_articles": 3,
   "procedure_records": 70,
-  "cache": "43ea19d4a2ad"
+  "cache": "8ba15545cfa1"
 }
