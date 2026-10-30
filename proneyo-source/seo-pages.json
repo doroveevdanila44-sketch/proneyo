@@ -79,7 +79,7 @@
       "title": "SPA-уход в Санкт-Петербурге, цены — Про НЕЁ",
       "description": "SPA-уход в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
-      "image": "/assets/led-face-care-2026.webp",
+      "image": "/assets/service-spa-square-v1.webp",
       "schema_types": [
         "BeautySalon",
         "BreadcrumbList",
@@ -94,7 +94,7 @@
       "title": "Коррекция фигуры в Санкт-Петербурге, цены — Про НЕЁ",
       "description": "Коррекция фигуры в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
-      "image": "/assets/local-body-care-2026.webp",
+      "image": "/assets/service-body-square-v1.webp",
       "schema_types": [
         "BeautySalon",
         "BreadcrumbList",
@@ -147,12 +147,12 @@
       ],
       "lastmod": "2026-10-30"
     },
-    "/articles/rolikovyy-massazh-tela/": {
-      "file": "articles/rolikovyy-massazh-tela/index.html",
-      "title": "Роликовый массаж: что происходит на сеансе — Про НЕЁ",
-      "description": "Как работает насадка, каких ощущений ждать и почему курс стоит обсуждать после первой встречи.",
+    "/articles/cellyulit-i-zhirovye-otlozheniya/": {
+      "file": "articles/cellyulit-i-zhirovye-otlozheniya/index.html",
+      "title": "Почему целлюлит не равен лишнему весу — Про НЕЁ",
+      "description": "Рельеф кожи и объём тела зависят от разных факторов. Разбираемся, почему для них нужны разные подходы.",
       "indexable": true,
-      "image": "/assets/roller-care-2026.webp",
+      "image": "/assets/article-cellulite-real-v3.webp",
       "schema_types": [
         "BlogPosting",
         "BreadcrumbList",
@@ -161,12 +161,12 @@
       ],
       "lastmod": "2026-10-30"
     },
-    "/articles/lokalnaya-korrekciya-tela/": {
-      "file": "articles/lokalnaya-korrekciya-tela/index.html",
-      "title": "Локальная коррекция тела: с чего начать — Про НЕЁ",
-      "description": "Чем работа с отдельной зоной отличается от похудения и какие вопросы помогут выбрать процедуру.",
+    "/articles/voprosy-pered-kursom-procedur/": {
+      "file": "articles/voprosy-pered-kursom-procedur/index.html",
+      "title": "Пять вопросов перед курсом процедур — Про НЕЁ",
+      "description": "Что уточнить на консультации, чтобы понимать цель, ограничения и полную стоимость программы.",
       "indexable": true,
-      "image": "/assets/local-body-care-2026.webp",
+      "image": "/assets/article-consultation-real-v3.webp",
       "schema_types": [
         "BlogPosting",
         "BreadcrumbList",
@@ -175,12 +175,12 @@
       ],
       "lastmod": "2026-10-30"
     },
-    "/articles/led-uhod-dlya-lica/": {
-      "file": "articles/led-uhod-dlya-lica/index.html",
-      "title": "LED-уход для лица: зачем нужен свет — Про НЕЁ",
-      "description": "Что за световой аппарат на фотографиях, как проходит уход и что важно уточнить перед сеансом.",
+    "/articles/domashniy-uhod-mezhdu-procedurami/": {
+      "file": "articles/domashniy-uhod-mezhdu-procedurami/index.html",
+      "title": "Домашний уход между процедурами: с чего начать — Про НЕЁ",
+      "description": "Мягкое очищение, увлажнение и защита от солнца. Что действительно нужно коже каждый день.",
       "indexable": true,
-      "image": "/assets/led-face-care-2026.webp",
+      "image": "/assets/article-homecare-real-v3.webp",
       "schema_types": [
         "BlogPosting",
         "BreadcrumbList",
@@ -205,5 +205,5 @@
   "sitemap_entries": 13,
   "published_articles": 3,
   "procedure_records": 70,
-  "cache": "9059a948cbcf"
+  "cache": "e97ebcbdff78"
 }

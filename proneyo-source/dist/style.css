@@ -448,3 +448,21 @@ html{background:#fbf7f1;color-scheme:light}
  .studio-experience .experience-statement{grid-column:2;grid-row:2;align-self:center;min-width:0;font-size:13px}
 }
 @media(max-width:360px){.studio-experience .experience-value{font-size:58px}.studio-experience .experience-statement{font-size:12px}}
+
+/* The restored LED photograph keeps the original body position and full frame. */
+.procedure-feature-led .procedure-photo{aspect-ratio:2/3;max-width:400px;justify-self:center;width:100%}
+.procedure-feature-led .procedure-photo img{object-fit:contain}
+.membership-description{font-size:14px;line-height:1.7;margin:20px 0 26px}
+.review-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;background:#fffaf5;padding:26px 30px 28px;border-radius:var(--radius);box-shadow:0 9px 30px rgba(95,61,54,.055)}
+.review-card blockquote{margin:12px 0 28px;font-family:var(--serif);font-size:26px;line-height:1.4;color:var(--ink)}
+.review-author{font-size:13px;font-weight:500;color:var(--berry);margin-top:auto}
+.review-source{font-size:10px;color:var(--body);line-height:1.6;border-bottom:1px solid var(--line);padding-bottom:4px;margin-top:9px}
+.review-source:hover{color:var(--berry)}
+@media(max-width:760px){.procedure-feature-led .procedure-photo{max-width:400px}.review-card{padding:24px}.review-card blockquote{font-size:25px}.membership-description{font-size:13px}}
+
+/* Keep the real camera angles and portrait framing from the supplied photos. */
+.procedure-feature-roller .procedure-photo{aspect-ratio:1038/1516;width:100%;max-width:400px;justify-self:center}
+.procedure-feature-local .procedure-photo{aspect-ratio:4/3}
+.procedure-feature-roller .procedure-photo img,.procedure-feature-local .procedure-photo img{object-fit:contain}
+.article-card-photo{aspect-ratio:3/4}
+.article-hero-image{width:auto;height:auto;max-width:100%;max-height:700px;object-fit:contain;margin-inline:auto}
