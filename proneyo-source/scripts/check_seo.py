@@ -75,7 +75,7 @@ def validate(root):
  expect('Sitemap: '+base+'/sitemap.xml' in (d/'robots.txt').read_text(),'robots sitemap')
  expect('User-agent: OAI-SearchBot\nAllow: /' in (d/'robots.txt').read_text(),'search crawler rule')
  raw=json.loads((d/'content/prices.json').read_text());t=(d/'prices/index.html').read_text();ids=re.findall(r'data-service-id="(\d+)"',t)
- expect(len(ids)==len(set(ids))==73 and set(ids)=={i['id'] for i in raw['items']},'73 price rows')
+ expect(len(ids)==len(set(ids))==len(raw['items']) and set(ids)=={i['id'] for i in raw['items']},'public price rows match catalog')
  data=Page(t).schemas[0];catalog=next(n for n in data['@graph'] if n['@type']=='OfferCatalog');mapped={o['@id'].rsplit('-',1)[1]:o for o in catalog['itemListElement']}
  for i in raw['items']:expect(mapped[i['id']]['price']==i['price_rub'] and mapped[i['id']]['priceCurrency']=='RUB','price mismatch '+i['id'])
  main=(d/'index.html').read_text();expect('17<span>+</span> <small>лет</small>' in main,'17+ years');expect(main.count('class="service-card service-tile"')==6,'six service cards')

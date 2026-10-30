@@ -12,7 +12,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-23"
+      "lastmod": "2026-10-30"
     },
     "/prices/": {
       "file": "prices/index.html",
@@ -27,7 +27,7 @@
         "OfferCatalog",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/services/": {
       "file": "services/index.html",
@@ -42,12 +42,12 @@
         "ItemList",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/services/kosmetologiya/": {
       "file": "services/kosmetologiya/index.html",
       "title": "Косметология в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "Косметология в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 500 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "description": "Косметология в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 500 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
       "image": "/assets/service-face-square-v2.webp",
       "schema_types": [
@@ -57,12 +57,12 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/services/massazh/": {
       "file": "services/massazh/index.html",
       "title": "Массаж в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "Массаж в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 450 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "description": "Массаж в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 450 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
       "image": "/assets/service-massage-square-v1.webp",
       "schema_types": [
@@ -72,14 +72,14 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/services/spa-uhod/": {
       "file": "services/spa-uhod/index.html",
       "title": "SPA-уход в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "SPA-уход в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "description": "SPA-уход в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
-      "image": "/assets/service-spa-square-v1.webp",
+      "image": "/assets/led-face-care-2026.webp",
       "schema_types": [
         "BeautySalon",
         "BreadcrumbList",
@@ -87,14 +87,14 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/services/korrekciya-figury/": {
       "file": "services/korrekciya-figury/index.html",
       "title": "Коррекция фигуры в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "Коррекция фигуры в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "description": "Коррекция фигуры в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
-      "image": "/assets/service-body-square-v1.webp",
+      "image": "/assets/local-body-care-2026.webp",
       "schema_types": [
         "BeautySalon",
         "BreadcrumbList",
@@ -102,12 +102,12 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/services/detskiy-massazh/": {
       "file": "services/detskiy-massazh/index.html",
       "title": "Детский массаж в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "Детский массаж в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "description": "Детский массаж в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
       "image": "/assets/service-children-square-v1.webp",
       "schema_types": [
@@ -117,12 +117,12 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/services/depilyaciya-i-pirsing/": {
       "file": "services/depilyaciya-i-pirsing/index.html",
       "title": "Депиляция и пирсинг в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "Депиляция и пирсинг в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 300 ₽. Полный список, длительность и онлайн-запись в DIKIDI.",
+      "description": "Депиляция и пирсинг в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 300 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
       "image": "/assets/service-details-square-v1.webp",
       "schema_types": [
@@ -132,59 +132,62 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/articles/": {
       "file": "articles/index.html",
       "title": "Об уходе простыми словами — статьи Про НЕЁ",
       "description": "Материалы студии Про НЕЁ об уходе за лицом и телом, косметологии и массаже. Вопросы перед процедурами и понятные объяснения.",
-      "indexable": false,
+      "indexable": true,
       "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BreadcrumbList",
         "CollectionPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
-    "/articles/botulinoterapiya-do-procedury/": {
-      "file": "articles/botulinoterapiya-do-procedury/index.html",
-      "title": "Ботулинотерапия: что обсудить до процедуры — Про НЕЁ",
-      "description": "Ботулинотерапия: что обсудить до процедуры. Статья готовится.",
-      "indexable": false,
-      "image": "/assets/pro-neyo-social-v1.png",
+    "/articles/rolikovyy-massazh-tela/": {
+      "file": "articles/rolikovyy-massazh-tela/index.html",
+      "title": "Роликовый массаж: что происходит на сеансе — Про НЕЁ",
+      "description": "Как работает насадка, каких ощущений ждать и почему курс стоит обсуждать после первой встречи.",
+      "indexable": true,
+      "image": "/assets/roller-care-2026.webp",
       "schema_types": [
+        "BlogPosting",
         "BreadcrumbList",
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
-    "/articles/kosmetologiya-i-sezon/": {
-      "file": "articles/kosmetologiya-i-sezon/index.html",
-      "title": "Косметология летом и зимой: как учитывать сезон — Про НЕЁ",
-      "description": "Косметология летом и зимой: как учитывать сезон. Статья готовится.",
-      "indexable": false,
-      "image": "/assets/pro-neyo-social-v1.png",
+    "/articles/lokalnaya-korrekciya-tela/": {
+      "file": "articles/lokalnaya-korrekciya-tela/index.html",
+      "title": "Локальная коррекция тела: с чего начать — Про НЕЁ",
+      "description": "Чем работа с отдельной зоной отличается от похудения и какие вопросы помогут выбрать процедуру.",
+      "indexable": true,
+      "image": "/assets/local-body-care-2026.webp",
       "schema_types": [
+        "BlogPosting",
         "BreadcrumbList",
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
-    "/articles/ruchnoy-i-apparatnyy-massazh/": {
-      "file": "articles/ruchnoy-i-apparatnyy-massazh/index.html",
-      "title": "Ручной и аппаратный массаж: в чём разница — Про НЕЁ",
-      "description": "Ручной и аппаратный массаж: в чём разница. Статья готовится.",
-      "indexable": false,
-      "image": "/assets/pro-neyo-social-v1.png",
+    "/articles/led-uhod-dlya-lica/": {
+      "file": "articles/led-uhod-dlya-lica/index.html",
+      "title": "LED-уход для лица: зачем нужен свет — Про НЕЁ",
+      "description": "Что за световой аппарат на фотографиях, как проходит уход и что важно уточнить перед сеансом.",
+      "indexable": true,
+      "image": "/assets/led-face-care-2026.webp",
       "schema_types": [
+        "BlogPosting",
         "BreadcrumbList",
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     },
     "/404.html": {
       "file": "404.html",
@@ -196,11 +199,11 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-22"
+      "lastmod": "2026-10-30"
     }
   },
-  "sitemap_entries": 9,
-  "published_articles": 0,
-  "procedure_records": 73,
-  "cache": "095dd8721009"
+  "sitemap_entries": 13,
+  "published_articles": 3,
+  "procedure_records": 70,
+  "cache": "9059a948cbcf"
 }

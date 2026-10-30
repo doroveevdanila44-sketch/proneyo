@@ -1,58 +1,58 @@
 {
   "/": {
-    "fingerprint": "ff7d7f4ea1bd8e794c473b42b1c52fe4f46c7fe76560de8b81d4ce34548fe793",
-    "lastmod": "2026-10-23"
+    "fingerprint": "63448cf028f11fbafaebec9fae49e570955f3640b2c6469a0a3e3d34cc5b27cf",
+    "lastmod": "2026-10-30"
   },
   "/prices/": {
-    "fingerprint": "c115a6e498e7a09675d231496299130d6b4b433e3fc84ea2460e8a97b5ab734f",
-    "lastmod": "2026-10-22"
+    "fingerprint": "c3e28c7963776afe5a03d8d0019cc417eac3a9fc781e096f9260d90830f2bcf1",
+    "lastmod": "2026-10-30"
   },
   "/services/": {
-    "fingerprint": "d07df6892e764ae3d89e076069f794fde8f6a91aa412607a92bd2ec7ca3ab5bb",
-    "lastmod": "2026-10-22"
+    "fingerprint": "23c829b0e06bf376ef76075d492c2d49fbf2beaf6af9e6db5d259efe4a7be7d3",
+    "lastmod": "2026-10-30"
   },
   "/services/kosmetologiya/": {
-    "fingerprint": "c583296aa21d3ec1ab63dc2348e5dd196413425bf19c4484c31b463973244f29",
-    "lastmod": "2026-10-22"
+    "fingerprint": "9d19a7c6673f1134a35a0e42110a18806a522f51851c58a27acce01bc230fad3",
+    "lastmod": "2026-10-30"
   },
   "/services/massazh/": {
-    "fingerprint": "799bfb4b2956e04dc5fac3d15e2a227bc376dc86616c16c2ae069e2db5b020bd",
-    "lastmod": "2026-10-22"
+    "fingerprint": "512975d8d142626a079d300f25a71657881c16b2118ffab787f30f3854769a7b",
+    "lastmod": "2026-10-30"
   },
   "/services/spa-uhod/": {
-    "fingerprint": "4b4bce864119e5ceb3a46f8405bd58e32eaa7940a499e868c4db865037880ef9",
-    "lastmod": "2026-10-22"
+    "fingerprint": "c5b22b15eb2165b99f69f30941cfb05cf3a7d73b70196375531d210525ddd6e0",
+    "lastmod": "2026-10-30"
   },
   "/services/korrekciya-figury/": {
-    "fingerprint": "edb9b320a9f6a9d1abdb90baeeea71b176b6cf3f9b5465093113020a6ee87b83",
-    "lastmod": "2026-10-22"
+    "fingerprint": "a3206239b3a75e64e0f93f91a8002d5fd917ccc19a8896b434fec5665fa4b115",
+    "lastmod": "2026-10-30"
   },
   "/services/detskiy-massazh/": {
-    "fingerprint": "24c8a4d8a75adc4206a6f5b97d95cf2f18ca91fc2861561ce09aec48402a8dc7",
-    "lastmod": "2026-10-22"
+    "fingerprint": "20bd3bbe30442c1f37ccec2008a2aea5718eba6ffdc94cc7e86a0d61220449ca",
+    "lastmod": "2026-10-30"
   },
   "/services/depilyaciya-i-pirsing/": {
-    "fingerprint": "6f69e45d1cb0021779a2266634861c14575841cb0a97e3b67e764fb1b90df04b",
-    "lastmod": "2026-10-22"
+    "fingerprint": "c8bc0b3ed36ea1b7050a5df87d51ebdf481962a3465ee273190af3a3489f3f40",
+    "lastmod": "2026-10-30"
   },
   "/articles/": {
-    "fingerprint": "3d25709ddaac2ac026c6cdaf7eafa25ca02447a3e59d5006126577dffe7efb39",
-    "lastmod": "2026-10-22"
+    "fingerprint": "972c47098173beb71c891b8bffbd04313005932482e896243db179f3dfd7a3eb",
+    "lastmod": "2026-10-30"
   },
-  "/articles/botulinoterapiya-do-procedury/": {
-    "fingerprint": "d4ee8d289a0e869ddbb903c8fc865a3dca5325e242833bf5713f08a4aa8650bc",
-    "lastmod": "2026-10-22"
+  "/articles/rolikovyy-massazh-tela/": {
+    "fingerprint": "7f731555ef54ec75cea5fce256acd2358992df4d94e486df438620c096e6fa7b",
+    "lastmod": "2026-10-30"
   },
-  "/articles/kosmetologiya-i-sezon/": {
-    "fingerprint": "90c2c3279a76e3be54f1ddec3c37c4ccddd9b15f5083fb48cd924058b6302bed",
-    "lastmod": "2026-10-22"
+  "/articles/lokalnaya-korrekciya-tela/": {
+    "fingerprint": "8b8c95ea515b0615a4813bdb48790aa66a70c0c9681b40c3ab4b0a105b3828f9",
+    "lastmod": "2026-10-30"
   },
-  "/articles/ruchnoy-i-apparatnyy-massazh/": {
-    "fingerprint": "5451a4b486dbb66c108b76250daf0f881ec5e50ae19632255afcd5cd955a2c31",
-    "lastmod": "2026-10-22"
+  "/articles/led-uhod-dlya-lica/": {
+    "fingerprint": "cb8bde24b0271944dee67e20b8dc91ae82a246b0ec7ca6450b321ffab8b85fd9",
+    "lastmod": "2026-10-30"
   },
   "/404.html": {
-    "fingerprint": "43334a0bbc6079134c05a3ef1771c21cea80c4426247a89818b5ec011201680e",
-    "lastmod": "2026-10-22"
+    "fingerprint": "b902787c700b69c0fc2d4436f78d3b33f3fe988a30d0312df0e6e7ba5a388f1a",
+    "lastmod": "2026-10-30"
   }
 }
