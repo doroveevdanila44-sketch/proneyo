@@ -179,14 +179,21 @@ def main():
   path='/articles/'+a['slug']+'/';ready=a['status']=='published';extra=[]
   content='<div class="article-pending"><h2>Статья скоро дополнится.</h2><p>Мы готовим материал. Загляните сюда чуть позже.</p></div>'
   if ready:
-   author=a['author'];content=f'<p class="article-byline">Автор: <a href="{H(author.get("url","/#specialists"),quote=True)}">{H(author["name"])}</a> · <time datetime="{a["published_at"]}">{a["published_at"][:10]}</time></p>'
+   author=a['author'];published_label=datetime.fromisoformat(a['published_at']).strftime('%d.%m.%Y');updated_label=datetime.fromisoformat(a['updated_at']).strftime('%d.%m.%Y')
+   content=f'<p class="article-byline">Материал студии <a href="{H(author.get("url","/#specialists"),quote=True)}">{H(author["name"])}</a> · Опубликовано <time datetime="{a["published_at"]}">{published_label}</time>'
+   if updated_label!=published_label:content+=f' · Обновлено <time datetime="{a["updated_at"]}">{updated_label}</time>'
+   content+='</p>'
+   if a.get('lead'):content+=f'<p class="article-lead">{H(a["lead"])}</p>'
    content+='<div class="article-content">'+''.join('<section><h2>'+H(s['heading'])+'</h2>'+''.join('<p>'+H(p)+'</p>' for p in s.get('paragraphs',[]))+('<ul>'+''.join('<li>'+H(b)+'</li>' for b in s['bullets'])+'</ul>' if s.get('bullets') else '')+'</section>' for s in a['sections'])+'</div>'
    if a.get('image'):content=f'<img class="article-hero-image" src="{H(a["image"],quote=True)}" width="{int(a["image_width"])}" height="{int(a["image_height"])}" alt="{H(a.get("image_alt",a["title"]),quote=True)}">'+content
    if a.get('sources'):content+='<section class="article-sources"><h2>Источники</h2><ul>'+''.join(f'<li><a href="{H(s["url"],quote=True)}" target="_blank" rel="noopener noreferrer">{H(s["title"])}</a></li>' for s in a['sources'])+'</ul></section>'
+   if a.get('related_links'):content+='<nav class="article-related" aria-label="По теме"><h2>По теме</h2><ul>'+''.join(f'<li><a href="{H(link["url"],quote=True)}">{H(link["label"])}</a></li>' for link in a['related_links'])+'</ul></nav>'
+   content+=f'<aside class="article-studio-note" aria-label="О студии"><p>Про НЕЁ · {H(cfg["city"])}</p><p><a href="{H(cfg["map_url"],quote=True)}" target="_blank" rel="noopener noreferrer">{H(cfg["street"])}</a> · {H(cfg["location_note"])}</p><p>По предварительной записи: <a href="tel:{cfg["telephone"]}">{H(cfg["telephone_display"])}</a>.</p></aside>'
    extra=[{'@type':'BlogPosting','@id':absurl(path)+'#article','headline':a['title'],'description':a['summary'],'mainEntityOfPage':{'@id':absurl(path)+'#webpage'},'author':{'@type':author.get('type','Person'),'name':author['name'],'url':absurl(author.get('url','/#specialists'))},'publisher':{'@id':base+'/#studio'},'datePublished':a['published_at'],'dateModified':a['updated_at'],'inLanguage':'ru-RU'}]
    if a.get('image'):extra[0]['image']=absurl(a['image'])
+   if a.get('sources'):extra[0]['citation']=[s['url'] for s in a['sources']]
   main=f'<main class="subpage container article-page" id="article">{breadcrumbs([("Главная","/"),("Статьи","/articles/"),(a["title"],None)])}<article><div class="subpage-heading"><p class="eyebrow">ПОЛЕЗНО ЗНАТЬ</p><h1>{H(a["title"])}</h1></div>{content}</article></main>'
-  save_page(path,shell(main),a['title']+' — Про НЕЁ',a['summary'] if ready else a['title']+'. Статья готовится.',[('Главная','/'),('Статьи','/articles/'),(a['title'],None)],image=a.get('image') or None,index=ready,extra=extra)
+  save_page(path,shell(main),a['title']+' — Про НЕЁ',a['summary'] if ready else a['title']+'. Статья готовится.',[('Главная','/'),('Статьи','/articles/'),(a['title'],None)],image=a.get('image') or None,index=ready,extra=extra,business=ready)
  main='<main class="subpage container"><div class="subpage-heading"><p class="eyebrow">ПРО НЕЁ</p><h1>Страница не найдена.</h1><p>Перейдите на главную или выберите нужную услугу.</p></div><div class="location-actions"><a class="button" href="/">На главную</a><a class="text-link" href="/services/">Услуги студии →</a></div></main>'
  save_page('/404.html',shell(main),'Страница не найдена — Про НЕЁ','Страница не найдена. Услуги и запись в студию Про НЕЁ.',[],index=False)
  # Regenerate modal prices from the same catalog, not a second hand-maintained list.
