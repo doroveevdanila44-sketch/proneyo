@@ -13,7 +13,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-03"
+      "lastmod": "2026-11-04"
     },
     "/prices/": {
       "file": "prices/index.html",
@@ -146,12 +146,12 @@
         "CollectionPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-03"
+      "lastmod": "2026-11-04"
     },
     "/articles/cellyulit-i-zhirovye-otlozheniya/": {
       "file": "articles/cellyulit-i-zhirovye-otlozheniya/index.html",
-      "title": "Почему целлюлит не равен лишнему весу — Про НЕЁ",
-      "description": "Целлюлит бывает при разном весе. Чем рельеф кожи отличается от локальных жировых отложений и чего можно ожидать от роликового массажа.",
+      "title": "Почему целлюлит бывает и у стройных — Про НЕЁ",
+      "description": "Почему ямочки на коже могут оставаться после похудения, чем целлюлит отличается от жировых отложений и какого эффекта ждать от роликового массажа.",
       "indexable": true,
       "image": "/assets/article-cellulite-editorial-v5.webp",
       "schema_types": [
@@ -161,12 +161,12 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-03"
+      "lastmod": "2026-11-04"
     },
     "/articles/voprosy-pered-kursom-procedur/": {
       "file": "articles/voprosy-pered-kursom-procedur/index.html",
       "title": "Пять вопросов перед курсом процедур — Про НЕЁ",
-      "description": "Пять вопросов на консультации: ожидаемый результат, выбор метода, полная цена курса, ограничения и оценка изменений. Короткий список перед записью.",
+      "description": "Что спросить на консультации, чтобы понять, подходит ли вам процедура, сколько будет стоить курс и как оценить результат.",
       "indexable": true,
       "image": "/assets/article-writing-relaxed-v9.webp",
       "schema_types": [
@@ -176,12 +176,12 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-03"
+      "lastmod": "2026-11-04"
     },
     "/articles/domashniy-uhod-mezhdu-procedurami/": {
       "file": "articles/domashniy-uhod-mezhdu-procedurami/index.html",
       "title": "Домашний уход между процедурами: с чего начать — Про НЕЁ",
-      "description": "Базовый уход за кожей между процедурами: мягкое очищение, увлажнение, SPF и вопросы о восстановлении после пилинга. Что уточнить у специалиста.",
+      "description": "Как умываться, увлажнять кожу и пользоваться SPF между процедурами. Что обсудить со специалистом, прежде чем возвращаться к привычным средствам после пилинга.",
       "indexable": true,
       "image": "/assets/article-homecare-editorial-v5.webp",
       "schema_types": [
@@ -191,7 +191,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-03"
+      "lastmod": "2026-11-04"
     },
     "/404.html": {
       "file": "404.html",
@@ -209,5 +209,5 @@
   "sitemap_entries": 13,
   "published_articles": 3,
   "procedure_records": 70,
-  "cache": "ab79290c5351"
+  "cache": "ea1081831e73"
 }
