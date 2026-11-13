@@ -190,14 +190,14 @@
 .studio-intro{font-family:var(--serif);font-size:21px;line-height:1.5;color:var(--body);margin-top:21px}
 .studio-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .studio-photo-card{margin:0;min-width:0;border-radius:var(--radius);overflow:hidden;background:#fffaf5;border:1px solid #e8dcd3}
-.studio-photo-empty{position:relative;aspect-ratio:4/3;background:#f0e5dc;display:grid;place-items:center;color:#b39990}
-.studio-photo-icon{width:44px;height:44px}
-.studio-photo-index{position:absolute;right:20px;bottom:17px;font-size:9px;letter-spacing:1px;color:#b39990}
-.studio-photo-card figcaption{display:flex;flex-direction:column;gap:9px;padding:23px 25px 25px}
-.studio-photo-title{font-family:var(--serif);font-size:23px;line-height:1.2}
-.studio-photo-note{font-size:11px;line-height:1.5;color:#a58d81}
-@media(max-width:1024px){.studio-gallery-grid{gap:18px}.studio-photo-card figcaption{padding:21px 20px}.studio-photo-title{font-size:21px}}
-@media(max-width:600px){.studio-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.studio-photo-card:first-child{grid-column:1/-1}.studio-photo-card figcaption{padding:19px 16px 21px}.studio-photo-title{font-size:19px}.studio-photo-card:first-child .studio-photo-title{font-size:24px}.studio-photo-note{font-size:10px}.studio-intro{font-size:19px;margin-top:18px}.studio-photo-icon{width:36px;height:36px}.studio-photo-index{right:14px;bottom:12px}}
+.studio-photo-card:first-child{grid-column:1/-1}
+.studio-photo-real{aspect-ratio:3/4;overflow:hidden;background:var(--soft)}
+.studio-photo-card:first-child .studio-photo-real{aspect-ratio:4/3}
+.studio-photo-real img{display:block;width:100%;height:100%;object-fit:cover}
+.studio-photo-card figcaption{padding:17px 22px 19px}
+.studio-photo-title{font-family:var(--serif);font-size:22px;line-height:1.2}
+@media(max-width:1024px){.studio-gallery-grid{gap:18px}.studio-photo-title{font-size:20px}}
+@media(max-width:600px){.studio-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.studio-photo-card figcaption{padding:12px 11px 14px}.studio-photo-title{font-size:17px}}
 
 
 /* Source-backed service categories, including children and facial waxing. */
@@ -445,8 +445,6 @@ html{background:#fbf7f1;color-scheme:light}
 .article-card-photo{display:block;width:100%;aspect-ratio:4/3;overflow:hidden;margin-bottom:24px;border-radius:var(--radius);background:var(--soft)}
 .article-card-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .article-card:hover .article-card-photo img{transform:scale(1.025)}
-.studio-photo-real{aspect-ratio:3/4;overflow:hidden;background:var(--soft)}
-.studio-photo-real img{width:100%;height:100%;object-fit:cover}
 @media(max-width:1024px){.procedure-feature{gap:30px}.procedure-copy h3{font-size:32px}.procedure-copy>p:not(.eyebrow){font-size:13px}.procedure-actions{gap:10px}.procedure-feature{grid-template-columns:1fr 1fr}.studio-experience.experience-layout{gap:26px}.experience-statement{font-size:13px}}
 @media(max-width:760px){.procedure-feature{grid-template-columns:1fr;gap:20px;margin-top:46px}.procedure-feature-reverse .procedure-photo,.procedure-feature-reverse .procedure-copy{grid-column:auto;grid-row:auto}.procedure-copy{padding:0 0 8px}.procedure-copy h3{font-size:38px}.procedure-copy>p:not(.eyebrow){max-width:none;font-size:14px}.procedure-copy .eyebrow{margin-bottom:13px}.procedure-actions{margin-top:22px;gap:12px 20px}.care-intro{max-width:none;margin-top:18px;font-size:13px}.studio-experience.experience-layout{grid-template-columns:1fr 1fr;gap:28px}.studio-experience .experience-intro{grid-column:1}.studio-experience .experience-item{border-left:1px solid #d6c4b9;padding-left:26px}.experience-statement{grid-column:1/-1;max-width:500px;font-size:14px}.article-card-photo{margin-bottom:22px}.studio-photo-real{aspect-ratio:3/4}}
 @media(max-width:360px){.procedure-copy h3{font-size:32px}.procedure-actions .button{width:100%}.studio-experience .experience-intro h2{font-size:30px}.studio-experience .experience-value{font-size:60px}.studio-experience .experience-item{padding-left:18px}.studio-experience.experience-layout{gap:20px}}
