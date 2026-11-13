@@ -13,7 +13,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-04"
+      "lastmod": "2026-11-13"
     },
     "/prices/": {
       "file": "prices/index.html",
@@ -28,7 +28,7 @@
         "OfferCatalog",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-13"
     },
     "/services/": {
       "file": "services/index.html",
@@ -43,12 +43,12 @@
         "ItemList",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-13"
     },
     "/services/kosmetologiya/": {
       "file": "services/kosmetologiya/index.html",
       "title": "Косметология в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "Косметология в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 500 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
+      "description": "Косметология в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 800 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
       "image": "/assets/service-face-square-v2.webp",
       "schema_types": [
@@ -58,7 +58,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-13"
     },
     "/services/massazh/": {
       "file": "services/massazh/index.html",
@@ -73,12 +73,12 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-13"
     },
     "/services/spa-uhod/": {
       "file": "services/spa-uhod/index.html",
       "title": "SPA-уход в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "SPA-уход в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 200 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
+      "description": "SPA-уход в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 1 500 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
       "image": "/assets/service-spa-square-v1.webp",
       "schema_types": [
@@ -88,7 +88,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-13"
     },
     "/services/korrekciya-figury/": {
       "file": "services/korrekciya-figury/index.html",
@@ -103,7 +103,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-13"
     },
     "/services/detskiy-massazh/": {
       "file": "services/detskiy-massazh/index.html",
@@ -118,12 +118,12 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-13"
     },
     "/services/depilyaciya-i-pirsing/": {
       "file": "services/depilyaciya-i-pirsing/index.html",
       "title": "Депиляция и пирсинг в Санкт-Петербурге, цены — Про НЕЁ",
-      "description": "Депиляция и пирсинг в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 300 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
+      "description": "Депиляция и пирсинг в студии Про НЕЁ на Пейзажной улице, 4, корпус 3. Разовые процедуры от 400 ₽. Процедуры, длительность и онлайн-запись в DIKIDI.",
       "indexable": true,
       "image": "/assets/service-details-square-v1.webp",
       "schema_types": [
@@ -133,7 +133,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-13"
     },
     "/articles/": {
       "file": "articles/index.html",
@@ -208,6 +208,6 @@
   },
   "sitemap_entries": 13,
   "published_articles": 3,
-  "procedure_records": 70,
-  "cache": "ea1081831e73"
+  "procedure_records": 69,
+  "cache": "d62019503d29"
 }

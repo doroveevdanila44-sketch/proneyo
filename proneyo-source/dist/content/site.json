@@ -9,7 +9,7 @@
     {
       "name": "Косметология",
       "url": "https://proneyo.vercel.app/services/kosmetologiya/",
-      "procedures": 30
+      "procedures": 29
     },
     {
       "name": "Массаж",
@@ -24,7 +24,7 @@
     {
       "name": "Коррекция фигуры",
       "url": "https://proneyo.vercel.app/services/korrekciya-figury/",
-      "procedures": 15
+      "procedures": 16
     },
     {
       "name": "Детский массаж",
@@ -38,5 +38,5 @@
     }
   ],
   "prices_source": "https://dikidi.net/ru/profile/pro_neyo_738151/services",
-  "prices_verified_at": "2026-10-30"
+  "prices_verified_at": "2026-11-13"
 }

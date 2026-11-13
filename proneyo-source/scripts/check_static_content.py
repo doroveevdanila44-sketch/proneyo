@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 import argparse, json
 
-from prepare_seo import CATEGORIES
+from prepare_seo import CATEGORIES, price_label
 
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 EXCLUDED = {'head', 'script', 'style', 'template', 'noscript', 'dialog', 'svg'}
@@ -107,10 +107,16 @@ def validate_static(root):
         for item in expected:
             if item['id'] not in rows:
                 continue
-            text = content(rows[item['id']])
-            for value in (item['display_name'], f"{item['duration_minutes']} мин",
-                          f"{item['price_rub']:,}".replace(',', ' ') + ' ₽'):
-                expect(normalize(value) in text, route + ': missing static value for ' + item['id'] + ': ' + value)
+            row = rows[item['id']]
+            row_text = content(row)
+            for value in (item['display_name'], f"{item['duration_minutes']} мин"):
+                expect(normalize(value) in row_text, route + ': missing static value for ' + item['id'] + ': ' + value)
+            amounts = [content(node) for node in elements(row)
+                       if 'price-amount' in node.attrs.get('class', '').split()]
+            expected_price = price_label(item['price_rub'])
+            if item['price_basis'] == 'за сеанс в курсе':
+                expected_price += ' за сеанс в курсе'
+            expect(amounts == [normalize(expected_price)], route + ': wrong static price for ' + item['id'])
 
     reachable, queue = set(), ['/']
     while queue:
