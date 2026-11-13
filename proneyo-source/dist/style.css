@@ -566,3 +566,26 @@ html{background:#fbf7f1;color-scheme:light}
 @media(max-width:1150px){.loyalty-panel{gap:40px;padding:46px}.review-source-card{padding:22px 20px}.review-excerpt{padding:21px}.review-excerpt-head{flex-wrap:wrap;gap:8px}.review-provider{margin-left:0;width:100%;padding-left:44px}}
 @media(max-width:760px){.application{padding-bottom:36px}.loyalty-section{padding-bottom:64px}.loyalty-panel{grid-template-columns:1fr;gap:30px;padding:34px 30px}.loyalty-offer h2{font-size:36px}.loyalty-offer h2 em{font-size:1.6em}.loyalty-panel-copy h3{font-size:28px}.loyalty-panel .eyebrow{margin-bottom:19px}.loyalty-perks{display:grid;gap:9px}.loyalty-perks li+li::before{content:none}.loyalty-perks li::before{content:'+';padding-right:10px;color:#eecdd5}.loyalty-button{width:100%}.loyalty-short-terms br{display:none}.local-correction-title>span{font-size:clamp(22px,6vw,30px)}.local-correction-title>em{font-size:clamp(26px,7.1vw,36px)}.studio-experience .experience-statement{font-size:18px;line-height:1.6}.review-platforms{grid-template-columns:1fr;gap:14px;margin-bottom:30px}.review-source-card{padding:22px}.review-excerpt{min-height:270px;padding:24px}.review-provider{margin-left:auto;width:auto;padding-left:0}.review-excerpt-head{flex-wrap:nowrap;min-height:46px}.review-excerpt blockquote{font-size:14px}.reviews-heading{margin-bottom:26px}}
 @media(max-width:360px){.loyalty-panel{padding:28px 22px}.loyalty-offer h2{font-size:32px}.loyalty-panel-copy h3{font-size:25px}.local-correction-title>span{font-size:22px}.local-correction-title>em{font-size:26px}.review-source-card{grid-template-columns:1fr;padding:20px}.source-platform-action{justify-self:stretch}.review-excerpt{padding:20px}.review-excerpt-head{flex-wrap:wrap}.review-provider{margin-left:0;width:100%;padding-left:46px}.studio-experience .experience-statement{font-size:17px}}
+
+.procedure-points{list-style:disc;display:grid;gap:12px;max-width:54ch;margin:18px 0;padding-inline-start:1.3em;font:15px/1.65 var(--sans);color:var(--body)}
+.procedure-points li{padding-inline-start:4px}
+.procedure-points li::marker{color:var(--berry)}
+.procedure-points strong{font-weight:600;color:var(--ink)}
+.care-note,.care-more{max-width:60ch;font:14px/1.65 var(--sans);color:var(--body)}
+.care-more{margin-top:18px;padding-top:12px;border-top:1px solid var(--line)}
+.care-more summary{cursor:pointer;color:var(--berry-deep);font-weight:600}
+.care-more p{margin:12px 0}
+.service-care{max-width:740px;margin-top:42px}
+.service-care h2{font-size:clamp(25px,3.4vw,36px);line-height:1.25}
+.contact-discuss{display:inline-flex;margin-top:14px}
+.membership-copy ul{list-style:disc;padding-inline-start:1.25em;margin-bottom:0}
+.membership-description{line-height:1.65;margin:16px 0 22px}
+.membership-description strong{display:inline-block;margin-top:6px;font-weight:600}
+.article-content{max-width:65ch}
+.article-content p,.article-content li{font-size:16px;line-height:1.75}
+.article-content li::marker{color:var(--berry)}
+.local-correction-title>span,.local-correction-title>em{white-space:normal}
+@media(max-width:600px){
+ .procedure-points,.article-content p,.article-content li{font-size:15px}
+ .service-care{margin-top:32px}
+}
