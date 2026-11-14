@@ -13,7 +13,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-14"
     },
     "/prices/": {
       "file": "prices/index.html",
@@ -103,7 +103,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-14"
     },
     "/services/detskiy-massazh/": {
       "file": "services/detskiy-massazh/index.html",
@@ -209,5 +209,5 @@
   "sitemap_entries": 13,
   "published_articles": 3,
   "procedure_records": 69,
-  "cache": "ee52030f8eb7"
+  "cache": "0c0761eae83e"
 }

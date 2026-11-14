@@ -135,6 +135,10 @@ def main():
  t=re.sub(r'<p itemprop="streetAddress">[^<]*</p>',lambda m:f'<p itemprop="streetAddress">{H(cfg["street"])}</p>',t,count=1)
  t=re.sub(r'<div data-procedure-details="(spa|body)">.*?</div>',
           lambda m:f'<div data-procedure-details="{m[1]}">{procedure_details(m[1])}</div>',t,flags=re.S)
+ procedures=next(item['procedures'] for item in memberships['items'] if item['price']==5000)
+ procedure_list=''.join(f'<li>{H(procedure)}</li>' for procedure in procedures)
+ t=re.sub(r'(<ul data-membership-procedures>).*?</ul>',
+          lambda m:m[1]+procedure_list+'</ul>',t,count=1,flags=re.S)
  consultation=f'{H(memberships["consultation_note"])}<br><strong>{H(cfg["city"])}, {H(cfg["street"])}</strong>'
  t=re.sub(r'(<p class="membership-description" data-membership-consultation>).*?</p>',
           lambda m:m[1]+consultation+'</p>',t,flags=re.S)

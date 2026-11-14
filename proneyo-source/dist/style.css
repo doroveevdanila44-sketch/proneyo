@@ -533,10 +533,6 @@ html{background:#fbf7f1;color-scheme:light}
 .loyalty-panel-copy>p.loyalty-short-terms{font-size:10px;line-height:1.7;color:#eecdd5;margin-top:17px}
 .loyalty-panel .loyalty-terms{margin-top:10px;font-size:10px;max-width:480px;color:#fff0f3}
 .loyalty-panel .loyalty-terms summary{color:#f7e3e7}
-/* The service heading is deliberately two readable lines. */
-.procedure-copy h2.local-correction-title{line-height:1.2;letter-spacing:-.7px}
-.local-correction-title>span{display:block;font-size:clamp(24px,2.35vw,34px);white-space:nowrap}
-.local-correction-title>em{display:block;font-size:clamp(28px,2.8vw,42px);margin-top:3px;white-space:nowrap}
 .studio-experience .experience-statement{font-family:var(--serif);font-size:22px;line-height:1.55}
 .studio-experience .experience-role{font-size:12px}
 /* Genuine platform rating and links sit apart from selected review excerpts. */
@@ -562,8 +558,8 @@ html{background:#fbf7f1;color-scheme:light}
 .review-read-link{font-size:11px;color:#6c5c56;text-decoration:underline;text-underline-offset:4px;margin-top:auto}
 .review-excerpt-note{font-size:9px;color:#999;margin-top:9px}
 @media(max-width:1150px){.loyalty-panel{gap:40px;padding:46px}.review-source-card{padding:22px 20px}.review-excerpt{padding:21px}.review-excerpt-head{flex-wrap:wrap;gap:8px}.review-provider{margin-left:0;width:100%;padding-left:44px}}
-@media(max-width:760px){.application{padding-bottom:36px}.loyalty-section{padding-bottom:64px}.loyalty-panel{grid-template-columns:1fr;gap:30px;padding:34px 30px}.loyalty-offer h2{font-size:36px}.loyalty-offer h2 em{font-size:1.6em}.loyalty-panel-copy h3{font-size:28px}.loyalty-panel .eyebrow{margin-bottom:19px}.loyalty-perks{display:grid;gap:9px}.loyalty-perks li+li::before{content:none}.loyalty-perks li::before{content:'+';padding-right:10px;color:#eecdd5}.loyalty-button{width:100%}.loyalty-short-terms br{display:none}.local-correction-title>span{font-size:clamp(22px,6vw,30px)}.local-correction-title>em{font-size:clamp(26px,7.1vw,36px)}.studio-experience .experience-statement{font-size:18px;line-height:1.6}.review-platforms{grid-template-columns:1fr;gap:14px;margin-bottom:30px}.review-source-card{padding:22px}.review-excerpt{min-height:270px;padding:24px}.review-provider{margin-left:auto;width:auto;padding-left:0}.review-excerpt-head{flex-wrap:nowrap;min-height:46px}.review-excerpt blockquote{font-size:14px}.reviews-heading{margin-bottom:26px}}
-@media(max-width:360px){.loyalty-panel{padding:28px 22px}.loyalty-offer h2{font-size:32px}.loyalty-panel-copy h3{font-size:25px}.local-correction-title>span{font-size:22px}.local-correction-title>em{font-size:26px}.review-source-card{grid-template-columns:1fr;padding:20px}.source-platform-action{justify-self:stretch}.review-excerpt{padding:20px}.review-excerpt-head{flex-wrap:wrap}.review-provider{margin-left:0;width:100%;padding-left:46px}.studio-experience .experience-statement{font-size:17px}}
+@media(max-width:760px){.application{padding-bottom:36px}.loyalty-section{padding-bottom:64px}.loyalty-panel{grid-template-columns:1fr;gap:30px;padding:34px 30px}.loyalty-offer h2{font-size:36px}.loyalty-offer h2 em{font-size:1.6em}.loyalty-panel-copy h3{font-size:28px}.loyalty-panel .eyebrow{margin-bottom:19px}.loyalty-perks{display:grid;gap:9px}.loyalty-perks li+li::before{content:none}.loyalty-perks li::before{content:'+';padding-right:10px;color:#eecdd5}.loyalty-button{width:100%}.loyalty-short-terms br{display:none}.studio-experience .experience-statement{font-size:18px;line-height:1.6}.review-platforms{grid-template-columns:1fr;gap:14px;margin-bottom:30px}.review-source-card{padding:22px}.review-excerpt{min-height:270px;padding:24px}.review-provider{margin-left:auto;width:auto;padding-left:0}.review-excerpt-head{flex-wrap:nowrap;min-height:46px}.review-excerpt blockquote{font-size:14px}.reviews-heading{margin-bottom:26px}}
+@media(max-width:360px){.loyalty-panel{padding:28px 22px}.loyalty-offer h2{font-size:32px}.loyalty-panel-copy h3{font-size:25px}.review-source-card{grid-template-columns:1fr;padding:20px}.source-platform-action{justify-self:stretch}.review-excerpt{padding:20px}.review-excerpt-head{flex-wrap:wrap}.review-provider{margin-left:0;width:100%;padding-left:46px}.studio-experience .experience-statement{font-size:17px}}
 
 .procedure-points{list-style:disc;display:grid;gap:12px;max-width:54ch;margin:18px 0;padding-inline-start:1.3em;font:15px/1.65 var(--sans);color:var(--body)}
 .procedure-points li{padding-inline-start:4px}
@@ -582,7 +578,6 @@ html{background:#fbf7f1;color-scheme:light}
 .article-content{max-width:65ch}
 .article-content p,.article-content li{font-size:16px;line-height:1.75}
 .article-content li::marker{color:var(--berry)}
-.local-correction-title>span,.local-correction-title>em{white-space:normal}
 @media(max-width:600px){
  .procedure-points,.article-content p,.article-content li{font-size:15px}
  .service-care{margin-top:32px}
