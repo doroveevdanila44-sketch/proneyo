@@ -242,7 +242,8 @@ def main():
  dump_json(d/'content/site.json',{'name':cfg['name'],'url':base+'/','city':cfg['city'],'address':cfg['street'],'telephone':cfg['telephone'],'booking_url':cfg['booking_url'],'directions':[{'name':c['name'],'url':base+'/services/'+c['slug']+'/','procedures':len(category_items(c))} for c in CATEGORIES],'prices_source':catalog['source'],'prices_verified_at':catalog['verified_at']})
  # Offline shell is content-versioned automatically; draft article routes are excluded.
  routes=[p for p,v in pages.items() if v['indexable']];assets=sorted(set(re.findall(r'(?:src|href)="(/assets/[^\"#]+)"',''.join((d/v['file']).read_text() for v in pages.values()))))
- shellpaths=routes+['/style.css','/app.js','/manifest.webmanifest']+assets
+ font_assets=sorted(set(re.findall(r'url\((/assets/fonts/[^)]+)\)',(d/'style.css').read_text())))
+ shellpaths=routes+['/style.css','/app.js','/manifest.webmanifest']+assets+font_assets
  cachehash=hashlib.sha256(b''.join((d/(p.strip('/')+'/index.html' if p.endswith('/') and p!='/' else 'index.html' if p=='/' else p.lstrip('/'))).read_bytes() for p in shellpaths)).hexdigest()[:12]
  sw="const CACHE='pro-neyo-"+cachehash+"';\nconst SHELL="+json.dumps(shellpaths,separators=(',',':'))+";\n"+"self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)));self.skipWaiting();});\nself.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});\nself.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==self.location.origin)return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));}return r;}).catch(()=>caches.match(e.request)));});\n"
  (d/'sw.js').write_text(sw)

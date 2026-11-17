@@ -1,4 +1,44 @@
-:root{--berry:#a5576d;--berry-deep:#874158;--ink:#553e3e;--body:#756665;--cream:#fbf7f1;--soft:#f2e9e1;--line:#ddcfc6;--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;--radius:4px}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(/assets/fonts/open-sans-italic-300-800-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(/assets/fonts/open-sans-italic-300-800-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(/assets/fonts/open-sans-normal-300-800-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(/assets/fonts/open-sans-normal-300-800-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root{--berry:#a5576d;--berry-deep:#874158;--ink:#553e3e;--body:#756665;--cream:#fbf7f1;--soft:#f2e9e1;--line:#ddcfc6;--serif:Georgia,'Times New Roman',serif;--sans:'Open Sans',Arial,sans-serif;--radius:4px}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}button,input{font:inherit}button,a{touch-action:manipulation}button{color:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button:focus-visible,a:focus-visible{outline:2px solid var(--berry);outline-offset:6px}button{border:0}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:var(--serif);font-weight:400}h2{font-size:clamp(36px,4vw,58px);line-height:1.1;letter-spacing:-1.7px}em{font-weight:400}button svg,a svg{flex-shrink:0}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}.icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}.container{width:min(1320px,calc(100% - 112px));margin-inline:auto}.section{padding-block:112px}.eyebrow{font:10px/1.5 var(--sans);font-weight:500;letter-spacing:2.8px;color:var(--berry);margin-bottom:23px}.button{display:inline-flex;align-items:center;justify-content:center;gap:28px;min-height:52px;padding:15px 24px;background:var(--berry);color:white;border:1px solid var(--berry);border-radius:var(--radius);font-size:13px;transition:background .2s,transform .2s;white-space:normal}.button:hover{background:var(--berry-deep);transform:translateY(-2px)}.button .icon{width:18px;height:18px}.button-outline{color:var(--berry);background:transparent}.button-outline:hover{background:var(--berry);color:#fff}.text-link{display:inline-flex;align-items:center;gap:13px;font-size:12px;border-bottom:1px solid #b79b9a;padding-block:7px;color:var(--berry)}.text-link .icon{width:16px;height:16px}.text-link:hover{color:var(--berry-deep);border-color:var(--berry-deep)}.skip-link{position:fixed;top:-70px;left:20px;padding:12px;z-index:100;background:var(--cream);color:var(--berry)}.skip-link:focus{top:15px}
 .site-header{position:absolute;top:0;left:0;right:0;z-index:20}.header-inner{width:min(1370px,calc(100% - 80px));height:132px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:35px}.brand{display:block;flex-shrink:0}.brand-logo{display:block;width:73px;height:98px}.desktop-nav{display:flex;align-items:center;gap:40px;margin-left:auto;font-size:12px}.desktop-nav a{position:relative;padding:8px 0}.desktop-nav a::after{content:'';position:absolute;bottom:2px;left:0;width:0;height:1px;background:var(--berry);transition:width .2s}.desktop-nav a:hover::after{width:100%}.header-book{min-height:42px;padding:10px 19px;gap:20px;font-size:12px}.menu-toggle,.mobile-nav{display:none}
 .hero{position:relative;isolation:isolate;aspect-ratio:16/9;min-height:710px;max-height:980px;overflow:hidden;background:#f5e8db}.hero-picture{position:absolute;inset:0;z-index:-1}.hero-picture img{width:100%;height:100%;object-fit:cover}.hero-content{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);text-align:center;width:54%;max-width:760px}.hero-content .eyebrow{margin-bottom:27px;font-size:10px;letter-spacing:3.7px}.hero h1{font-size:clamp(54px,6.2vw,94px);line-height:1.02;letter-spacing:-3px;color:var(--berry-deep)}.hero h1 em{font-size:.92em}.hero-subtitle{font-family:var(--serif);font-size:20px;color:#896c65;margin-top:24px}.hero-content .button{margin-top:33px}.hero-location{position:absolute;bottom:38px;left:56px;display:flex;align-items:center;gap:10px;font-size:11px;color:#876c65}.hero-location .icon{width:15px;height:15px}.hero-scroll{position:absolute;bottom:38px;left:50%;transform:translateX(-50%);display:flex;gap:18px;align-items:center;font-size:10px;letter-spacing:.5px}.hero-scroll .icon{width:16px;height:16px;transform:rotate(90deg)}
@@ -581,4 +621,17 @@ html{background:#fbf7f1;color-scheme:light}
 @media(max-width:600px){
  .procedure-points,.article-content p,.article-content li{font-size:15px}
  .service-care{margin-top:32px}
+}
+
+/* Typography selected in the studio's font preview. */
+html:root body :is(header,main,footer,nav,dialog) :is(p,li,small,label,summary,button,a,figcaption,.eyebrow,.service-note,.contact-label,.price-amount,.contact-note,.app-benefits,.article-category){
+  font-family:var(--sans);
+  font-weight:400;
+  font-style:normal;
+}
+html:root body :is(h1,h2,h3,h4,h5,h6,.service-caption,.services-display-title,.studio-photo-title,.experience-value,.experience-statement,.app-lead,.price-group-title,.contact-phone,.contact-studio-name),
+html:root body :is(h1,h2,h3,h4,h5,h6) :is(a,span,small,strong,em){
+  font-family:var(--serif);
+  font-weight:400;
+  font-style:normal;
 }
