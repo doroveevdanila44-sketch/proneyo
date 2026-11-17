@@ -1,9 +1,9 @@
 {
   "source": "https://dikidi.net/ru/profile/pro_neyo_738151/services",
   "booking_url": "https://dikidi.net/ru/record/738151",
-  "verified_at": "2026-11-13",
+  "verified_at": "2026-11-17",
   "secondary_source": "https://yandex.ru/maps/org/pro_neyo/174748430473/prices/",
-  "pricing_note": "Все 69 опубликованных позиций сверены с каталогом DIKIDI 13.11.2026. Для курсов указана цена одного сеанса, полная стоимость курса сохранена в названии.",
+  "pricing_note": "Все 72 позиции сверены с каталогом DIKIDI 17.11.2026. Для курсов указана цена одного сеанса, полная стоимость курса сохранена в названии.",
   "items": [
     {
       "id": "22394769",
@@ -20,6 +20,22 @@
       "price_basis": "за процедуру",
       "duration": "30 мин",
       "site_group": "spa"
+    },
+    {
+      "id": "16579384",
+      "name": "Безиньекционная Биоревитализация губ",
+      "category": "Био/мезо",
+      "category_id": "4047338",
+      "price_rub": 2500,
+      "price_display": "2 500 RUB",
+      "duration_display": "30 м",
+      "duration_minutes": 30,
+      "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/16579384",
+      "image_url": "https://dikidi.net/assets/images/new-company-avatar-88.png",
+      "display_name": "Безинъекционная биоревитализация губ",
+      "price_basis": "за процедуру",
+      "duration": "30 мин",
+      "site_group": "cosmetology"
     },
     {
       "id": "6781029",
@@ -790,6 +806,22 @@
       "site_group": "body"
     },
     {
+      "id": "6780921",
+      "name": "Биоревитализация безиньекционная",
+      "category": "Ревитализация",
+      "category_id": "1647957",
+      "price_rub": 3500,
+      "price_display": "3 500 RUB",
+      "duration_display": "30 м",
+      "duration_minutes": 30,
+      "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/6780921",
+      "image_url": "https://dikidi.net/assets/images/new-company-avatar-88.png",
+      "display_name": "Безинъекционная биоревитализация",
+      "price_basis": "за процедуру",
+      "duration": "30 мин",
+      "site_group": "cosmetology"
+    },
+    {
       "id": "6780915",
       "name": "Карбоксиревитализация",
       "category": "Ревитализация",
@@ -966,6 +998,22 @@
       "site_group": "cosmetology"
     },
     {
+      "id": "6780905",
+      "name": "Фракционная мезотерапия",
+      "category": "Фракционная мезотерапия",
+      "category_id": "1647943",
+      "price_rub": 2500,
+      "price_display": "2 500 RUB",
+      "duration_display": "40 м",
+      "duration_minutes": 40,
+      "url": "https://dikidi.net/ru/profile/pro_neyo_738151/service/6780905",
+      "image_url": "https://dikidi.net/assets/images/new-company-avatar-88.png",
+      "display_name": "Фракционная мезотерапия",
+      "price_basis": "за процедуру",
+      "duration": "40 мин",
+      "site_group": "cosmetology"
+    },
+    {
       "id": "6779055",
       "name": "Атравматичексая чистка",
       "category": "Чистки",
@@ -1110,6 +1158,5 @@
       "site_group": "body"
     }
   ],
-  "rechecked_at": "2026-11-13T13:48:02Z",
-  "publication_note": "На сайте опубликована выборка услуг. Условия остальных процедур уточняйте по телефону студии."
+  "rechecked_at": "2026-11-17T12:03:21Z"
 }

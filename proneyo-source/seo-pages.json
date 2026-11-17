@@ -28,7 +28,7 @@
         "OfferCatalog",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-17"
     },
     "/services/": {
       "file": "services/index.html",
@@ -58,7 +58,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-17"
     },
     "/services/massazh/": {
       "file": "services/massazh/index.html",
@@ -73,7 +73,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-17"
     },
     "/services/spa-uhod/": {
       "file": "services/spa-uhod/index.html",
@@ -103,7 +103,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-14"
+      "lastmod": "2026-11-17"
     },
     "/services/detskiy-massazh/": {
       "file": "services/detskiy-massazh/index.html",
@@ -118,7 +118,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-17"
     },
     "/services/depilyaciya-i-pirsing/": {
       "file": "services/depilyaciya-i-pirsing/index.html",
@@ -133,7 +133,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-17"
     },
     "/articles/": {
       "file": "articles/index.html",
@@ -208,6 +208,6 @@
   },
   "sitemap_entries": 13,
   "published_articles": 3,
-  "procedure_records": 69,
-  "cache": "23921a4014f8"
+  "procedure_records": 72,
+  "cache": "81e2e7eb67b9"
 }

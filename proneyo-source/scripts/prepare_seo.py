@@ -29,7 +29,7 @@ CATEGORIES=[
  {'key':'children','slug':'detskiy-massazh','name':'Детский массаж','groups':['children'],'image':'/assets/service-children-square-v1.webp','note':'Общий массаж и шейно-воротниковая зона','intro':'Детский массаж в студии «Про НЕЁ» в Санкт-Петербурге, на Пейзажной улице. В каталоге есть два варианта: детский массаж на 30 минут и массаж шейно-воротниковой зоны на 20 минут.','ids':['22993900','23723992'],'faq':[('Какие варианты детского массажа доступны?','В записи есть детский массаж длительностью 30 минут и детский массаж шейно-воротниковой зоны длительностью 20 минут.'),('Сколько стоит сеанс?','В прайсе есть детский массаж ({service_22993900}) и массаж шейно-воротниковой зоны ({service_23723992}). Вопросы о возрасте ребёнка и выборе процедуры уточните у специалиста до записи.')]},
  {'key':'details','slug':'depilyaciya-i-pirsing','name':'Депиляция и пирсинг','groups':['depilation','piercing'],'image':'/assets/service-details-square-v1.webp','note':'Депиляция лица и пирсинг ушей','intro':'Восковая депиляция лица и пирсинг ушей в студии «Про НЕЁ». В записи доступны депиляция носа и верхней губы, пирсинг мочки и хряща уха. Ниже — отдельные цены и длительность каждого варианта.','ids':['6792439','6792447','6792061','6792077'],'faq':[('Какие зоны депиляции есть в прайсе?','Доступна депиляция носа ({service_6792439}) и верхней губы ({service_6792447}).'),('Какие варианты пирсинга доступны?','Можно записаться на пирсинг мочки уха ({service_6792061}) или хряща ({service_6792077}). Условия процедуры обсудите со специалистом при записи.')]}]
 PRICE_GROUPS=[('cosmetology','Косметология','Чистки, пилинги и уход за кожей'),('massage','Массаж','Для лица и тела · разовые сеансы и курсы'),('children','Детский массаж','Общий массаж и шейно-воротниковая зона'),('spa','SPA','Уход с LED-маской и гидролатом розы'),('body','Коррекция фигуры','Роликовый массаж и аппаратные процедуры'),('depilation','Депиляция','Восковая депиляция лица'),('piercing','Пирсинг','Мочка и хрящ уха'),('other','Консультация и другие услуги','Консультация и дополнительные процедуры')]
-FACE_CATS=['Чистки','Пилинги','Уходовые процедуры','Гиалуронопластика','Ревитализация']
+FACE_CATS=['Чистки','Пилинги','Уходовые процедуры','Гиалуронопластика','Ревитализация','Био/мезо','Фракционная мезотерапия']
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--base-url');ap.add_argument('--root',type=Path,default=ROOT);args=ap.parse_args()
@@ -164,7 +164,7 @@ def main():
   if 'id="faq"' in t:t=re.sub(r'<section class="section container faq-section".*?</section>',lambda m:rendered_faq,t,count=1,flags=re.S)
   else:t=t.replace('<section class="section studio-gallery"',rendered_faq+'\n\n    <section class="section studio-gallery"',1)
  save_page('/',t,'Косметология и массаж в Санкт-Петербурге — Про НЕЁ',f'Косметология, массаж и SPA в студии Про НЕЁ. {cfg["city"]}, {cfg["street"]}. Цены и запись в DIKIDI.',[('Главная','/')],business=True,extra=[faq_schema(home_faq,base)] if home_faq else None)
- # Public price selection, generated from the published catalog.
+ # Public prices, generated from the published catalog.
  sections=[]
  for gid,name,note in PRICE_GROUPS:
   selected=[s for s in items if s['site_group']==gid]
