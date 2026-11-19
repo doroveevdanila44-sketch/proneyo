@@ -13,7 +13,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-19"
     },
     "/prices/": {
       "file": "prices/index.html",
@@ -209,5 +209,5 @@
   "sitemap_entries": 13,
   "published_articles": 3,
   "procedure_records": 72,
-  "cache": "81e2e7eb67b9"
+  "cache": "c5a2f9236c10"
 }
