@@ -115,7 +115,7 @@ def main():
    head=head.replace('<meta charset="UTF-8">','<meta charset="UTF-8">'+preloads,1)
    if (d/'video-hero.js').exists():
     head=head.replace('<link rel="stylesheet" href="/style.css">','<link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/video-hero.css?v=4">',1)
-    head=head.replace('<script src="/app.js" defer></script>','<script src="/app.js" defer></script><script src="/video-hero.js?v=4" defer></script>',1)
+    head=head.replace('<script src="/app.js" defer></script>','<script src="/app.js" defer></script><script src="/video-hero.js?v=6" defer></script>',1)
   t=re.sub(r'<head>.*?</head>',lambda m:'<head>\n'+head+'\n</head>',t,count=1,flags=re.S)
   # Current canonical origin is rewritten in visible microdata as well.
   t=re.sub(r'itemid="https://[^\"]+/#studio"',f'itemid="{base}/#studio"',t)

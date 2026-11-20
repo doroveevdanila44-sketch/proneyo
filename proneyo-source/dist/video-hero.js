@@ -54,7 +54,9 @@
    video.hidden=!active;
    if(!shouldPlay(video)){video.pause();return;}
    video.preload='auto';
-   if(!video.getAttribute('src')&&!video.querySelector('source')){
+   // A source media query is not reselected when the viewport changes.
+   // Set the active URL explicitly so desktop-to-mobile transitions also load it.
+   if(video.getAttribute('src')!==files[selected]){
     video.src=files[selected];
     video.load();
    }
@@ -64,7 +66,10 @@
  videos.forEach(video=>{
   prepare(video);
   ['loadedmetadata','loadeddata','canplay'].forEach(event=>video.addEventListener(event,playActive));
-  video.addEventListener('playing',()=>{if(shouldPlay(video))clearTimeout(retryTimer);});
+  video.addEventListener('playing',()=>{
+   if(shouldPlay(video))clearTimeout(retryTimer);
+   else video.pause();
+  });
   video.addEventListener('pause',()=>{if(shouldPlay(video))retry();});
   video.addEventListener('ended',()=>{
    if(shouldPlay(video)){video.currentTime=0;playActive();}
