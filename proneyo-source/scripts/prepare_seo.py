@@ -113,9 +113,6 @@ def main():
   if path=='/':
    preloads=''.join(f'<link rel="preload" as="image" href="{asset}" fetchpriority="high">' for asset in ['/assets/app-visual.webp','/assets/app-store-light-clean.webp'])
    head=head.replace('<meta charset="UTF-8">','<meta charset="UTF-8">'+preloads,1)
-   if (d/'video-hero.js').exists():
-    head=head.replace('<link rel="stylesheet" href="/style.css">','<link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/video-hero.css?v=4">',1)
-    head=head.replace('<script src="/app.js" defer></script>','<script src="/app.js" defer></script><script src="/video-hero.js?v=6" defer></script>',1)
   t=re.sub(r'<head>.*?</head>',lambda m:'<head>\n'+head+'\n</head>',t,count=1,flags=re.S)
   # Current canonical origin is rewritten in visible microdata as well.
   t=re.sub(r'itemid="https://[^\"]+/#studio"',f'itemid="{base}/#studio"',t)
@@ -246,10 +243,9 @@ def main():
  # Offline shell is content-versioned automatically; draft article routes are excluded.
  routes=[p for p,v in pages.items() if v['indexable']];assets=sorted(set(re.findall(r'(?:src|href)="(/assets/[^\"#]+)"',''.join((d/v['file']).read_text() for v in pages.values()))))
  font_assets=sorted(set(re.findall(r'url\((/assets/fonts/[^)]+)\)',(d/'style.css').read_text())))
- hero_assets=[p for p in ['/video-hero.css','/video-hero.js','/assets/hero-video-poster.webp','/assets/hero-video-poster-2.webp'] if (d/p.lstrip('/')).exists()]
- shellpaths=routes+['/style.css','/app.js','/manifest.webmanifest']+assets+font_assets+hero_assets
+ shellpaths=routes+['/style.css','/app.js','/manifest.webmanifest']+assets+font_assets
  cachehash=hashlib.sha256(b''.join((d/(p.strip('/')+'/index.html' if p.endswith('/') and p!='/' else 'index.html' if p=='/' else p.lstrip('/'))).read_bytes() for p in shellpaths)).hexdigest()[:12]
- sw="const CACHE='pro-neyo-"+cachehash+"';\nconst SHELL="+json.dumps(shellpaths,separators=(',',':'))+";\n"+"self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)));self.skipWaiting();});\nself.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});\nself.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==self.location.origin||e.request.headers.has('range')||new URL(e.request.url).pathname.endsWith('.mp4'))return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));}return r;}).catch(()=>caches.match(e.request)));});\n"
+ sw="const CACHE='pro-neyo-"+cachehash+"';\nconst SHELL="+json.dumps(shellpaths,separators=(',',':'))+";\n"+"self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)));self.skipWaiting();});\nself.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});\nself.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==self.location.origin)return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));}return r;}).catch(()=>caches.match(e.request)));});\n"
  (d/'sw.js').write_text(sw)
  dump_json(root/'seo-pages.json',{'site_url':base,'generated_pages':pages,'sitemap_entries':sum(p['indexable'] for p in pages.values()),'published_articles':len(published),'procedure_records':len(items),'cache':cachehash})
  print(json.dumps({'pages':len(pages),'indexable_pages':sum(p['indexable'] for p in pages.values()),'service_pages':len(CATEGORIES),'procedures':len(items),'published_articles':len(published),'cache':cachehash},ensure_ascii=False))
