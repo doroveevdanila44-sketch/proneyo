@@ -59,8 +59,6 @@ document.querySelectorAll('[data-collapse-price]').forEach(button=>button.addEve
  group.querySelector('summary').focus({preventScroll:true});
  group.scrollIntoView({block:'start',behavior:'instant'});
 }));
-const articleSoon=document.getElementById('article-soon-dialog');
-document.querySelectorAll('[data-article]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());document.getElementById('article-soon-subject').textContent=button.dataset.article;articleSoon.showModal();}));
 const downloadDialog=document.getElementById('download-dialog');
 document.querySelectorAll('[data-download]').forEach(link=>link.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;e.preventDefault();document.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());downloadDialog.showModal();}));
 if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{});});}
