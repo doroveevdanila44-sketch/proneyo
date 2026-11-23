@@ -40,6 +40,7 @@ def main():
    raise SystemExit('--base-url must be an HTTPS origin without credentials, path, query or fragment')
   cfg['site_url']=args.base_url.rstrip('/');dump_json(root/'seo.config.json',cfg)
  base=cfg['site_url'].rstrip('/');absurl=lambda p:base+p if p.startswith('/') else p
+ studio_description=f'«Про неё» — студия эстетической косметологии и массажа в Санкт-Петербурге. В студии проводят уходы за лицом, массаж лица и тела и SPA-уход. Адрес: {cfg["street"]}.'
  catalog=read_json(d/'content/prices.json');items=catalog['items'];byid={x['id']:x for x in items}
  procedure_terms={f"service_{s['id']}": f"{s['duration_minutes']} мин, {price_label(s['price_rub'])}" for s in items}
  verified=datetime.fromisoformat(catalog['verified_at']).strftime('%d.%m.%Y')
@@ -83,7 +84,7 @@ def main():
   basis='<small>за сеанс в курсе</small>' if s['price_basis']=='за сеанс в курсе' else ''
   return f'<li class="price-row" data-service-id="{s["id"]}"{idattr}><span class="price-service">{H(s["display_name"])}<small>{s["duration_minutes"]} мин</small></span><span class="price-amount">{price_label(s["price_rub"])}{basis}</span></li>'
  def studio_schema():
-  return {'@type':'BeautySalon','@id':base+'/#studio','name':cfg['name'],'url':base+'/','logo':absurl(cfg['logo']),'image':absurl(cfg['default_image']),'telephone':cfg['telephone'],'description':'Современная бьюти-студия в Санкт-Петербурге. Косметология, массаж для взрослых и детей, SPA-уход, коррекция фигуры, депиляция лица и пирсинг ушей.','address':{'@type':'PostalAddress','streetAddress':cfg['street'],'addressLocality':cfg['city'],'addressCountry':cfg['country']},'hasMap':cfg['map_url'],'sameAs':[cfg['map_url'],cfg['profile_url']]+cfg['social_urls'],'hasOfferCatalog':{'@type':'OfferCatalog','name':'Направления услуг студии','itemListElement':[{'@type':'OfferCatalog','name':c['name'],'url':base+'/services/'+c['slug']+'/'} for c in CATEGORIES]}}
+  return {'@type':'BeautySalon','@id':base+'/#studio','name':cfg['name'],'url':base+'/','logo':absurl(cfg['logo']),'image':absurl(cfg['default_image']),'telephone':cfg['telephone'],'description':studio_description,'address':{'@type':'PostalAddress','streetAddress':cfg['street'],'addressLocality':cfg['city'],'addressCountry':cfg['country']},'hasMap':cfg['map_url'],'sameAs':[cfg['map_url'],cfg['profile_url']]+cfg['social_urls'],'hasOfferCatalog':{'@type':'OfferCatalog','name':'Направления услуг студии','itemListElement':[{'@type':'OfferCatalog','name':c['name'],'url':base+'/services/'+c['slug']+'/'} for c in CATEGORIES]}}
  def offer(s):
   return {'@type':'Offer','@id':base+'/prices/#offer-'+s['id'],'name':s['display_name'],'price':s['price_rub'],'priceCurrency':'RUB','url':s['url'],'description':f'{s["duration_minutes"]} мин. '+('Стоимость одного сеанса в курсе; полная стоимость курса указана в названии.' if s['price_basis']=='за сеанс в курсе' else 'Стоимость процедуры.'),'itemOffered':{'@type':'Service','@id':base+'/prices/#procedure-'+s['id'],'name':s['display_name'],'serviceType':s['category'],'provider':{'@id':base+'/#studio'},'areaServed':{'@type':'City','name':cfg['city']}}}
  def category_items(c):return [s for s in items if s['site_group'] in c['groups']]
@@ -129,6 +130,8 @@ def main():
  t=t.replace('<body>','<body class="home-page">',1)
  t=re.sub(r'<span class="(?:service-number|review-slot|studio-photo-index)"[^>]*>.*?</span>','',t)
  t=t.replace('<div class="experience-value">17 <small>лет</small></div>','<div class="experience-value">17<span>+</span> <small>лет</small></div>')
+ t=re.sub(r'(<p class="experience-statement">).*?</p>',
+          lambda m:m[1]+H(studio_description)+'</p>',t,count=1,flags=re.S)
  t=re.sub(r'(<h1 id="hero-title">Косметология<br>)\s*',r'\1\n',t)
  t=t.replace('<p class="eyebrow">ЛИЦО · ТЕЛО · ВАШЕ СОСТОЯНИЕ</p><h2 id="services-title">Забота начинается здесь.</h2>','<h2 class="eyebrow service-section-label" id="services-title">Услуги студии</h2><p class="services-display-title">Забота начинается здесь.</p>')
  start=t.index('<div class="service-grid">');end=t.index('<p class="services-additional">',start);t=t[:start]+cards()+t[end:]
@@ -242,7 +245,7 @@ def main():
    e=ET.SubElement(smap,'{'+ns+'}url');ET.SubElement(e,'{'+ns+'}loc').text=absurl(path);ET.SubElement(e,'{'+ns+'}lastmod').text=p['lastmod']
  ET.indent(smap,space='  ')
  ET.ElementTree(smap).write(d/'sitemap.xml',encoding='UTF-8',xml_declaration=True)
- robots='User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nSitemap: '+base+'/sitemap.xml\n'
+ robots='# '+studio_description+'\n\nUser-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nSitemap: '+base+'/sitemap.xml\n'
  (d/'robots.txt').write_text(robots)
  dump_json(d/'content/site.json',{'name':cfg['name'],'url':base+'/','city':cfg['city'],'address':cfg['street'],'telephone':cfg['telephone'],'booking_url':cfg['booking_url'],'directions':[{'name':c['name'],'url':base+'/services/'+c['slug']+'/','procedures':len(category_items(c))} for c in CATEGORIES],'prices_source':catalog['source'],'prices_verified_at':catalog['verified_at']})
  # Offline shell is content-versioned automatically; draft article routes are excluded.
