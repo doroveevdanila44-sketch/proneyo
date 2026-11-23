@@ -58,13 +58,18 @@ def main():
     dt=datetime.fromisoformat(a[key].replace('Z','+00:00'))
     if not dt.tzinfo:raise ValueError('Article dates need timezone')
    if datetime.fromisoformat(a['updated_at'].replace('Z','+00:00'))<datetime.fromisoformat(a['published_at'].replace('Z','+00:00')):raise ValueError('Article modified date precedes publication')
-   if a.get('image') and (not a.get('image_width') or not a.get('image_height')):raise ValueError('Published article image needs actual width and height')
    published.append(a)
   elif a['status']!='coming_soon':raise ValueError('Unknown article status')
  ptemplate=(d/'prices/index.html').read_text()
  bodyheader=re.search(r'<body[^>]*>(.*?)<main',ptemplate,re.S).group(1)
  footer=re.search(r'<footer class="site-footer container">.*?</footer>',(d/'index.html').read_text(),re.S).group(0)
  def shell(main):return '<!doctype html>\n<html lang="ru"><head></head><body class="inner-page">'+bodyheader+main+footer+'</body></html>\n'
+ def article_shell(main):
+  return '''<!doctype html>
+<html lang="ru"><head></head><body class="inner-page articles-text-page">
+<header class="article-site-header container"><nav aria-label="Навигация сайта">
+<a class="article-brand" href="/">Про НЕЁ</a><a href="/services/">Услуги</a><a href="/prices/">Цены</a><a href="/articles/">Статьи</a>
+</nav></header>'''+main+'</body></html>\n'
  def book(label='Записаться онлайн',url=None):
   return f'<a class="button" href="{url or cfg["booking_url"]}" target="_blank" rel="noopener noreferrer">{label} {ARROW}</a>'
  def discuss(link_class='button'):
@@ -84,15 +89,14 @@ def main():
  def category_items(c):return [s for s in items if s['site_group'] in c['groups']]
  def cards(tag='h3',modal=True):
   return '<div class="service-grid">'+''.join(f'''<a class="service-card service-tile" href="/services/{c['slug']}/"{(' data-service="'+c['key']+'" aria-haspopup="dialog" aria-controls="service-dialog"') if modal else ''}><span class="service-image"><img src="{c['image']}" width="1254" height="1254" alt="{H(c['name'])}: иллюстрация направления студии" loading="lazy" decoding="async"></span><div class="service-tile-copy"><{tag} class="service-caption">{c['name']}</{tag}><p class="service-note">{c['note']}</p></div><span class="service-open" aria-hidden="true">{ARROW}</span></a>''' for c in CATEGORIES)+'</div>'
- def article_cards():
-  out='<div class="articles-grid">'
-  for a in articles:
-   ready=a['status']=='published';href='/articles/'+a['slug']+'/'
-   title=f'<a href="{href}">{H(a["title"])}</a>' if ready else f'<button type="button" class="article-title-button" data-article="{H(a["title"],quote=True)}" aria-haspopup="dialog" aria-controls="article-soon-dialog">{H(a["title"])}</button>'
-   action=f'<a class="text-link" href="{href}">Читать материал →</a>' if ready else f'<button type="button" class="text-link article-soon-button" data-article="{H(a["title"],quote=True)}" aria-haspopup="dialog" aria-controls="article-soon-dialog">Скоро дополним →</button>'
-   photo=f'<a class="article-card-photo" href="{href}" tabindex="-1" aria-hidden="true"><img src="{H(a["image"],quote=True)}" width="{int(a["image_width"])}" height="{int(a["image_height"])}" alt="" loading="lazy" decoding="async"></a>' if ready and a.get('image') else ''
-   out+=f'<article class="article-card">{photo}<span class="article-category">{"МАТЕРИАЛ СТУДИИ" if ready else "ГОТОВИМ МАТЕРИАЛ"}</span><h3>{title}</h3><p>{H(a["summary"])}</p>{action}</article>'
-  return out+'</div>'
+ def article_links(heading):
+  if not published:
+   return '<p>Готовим новые материалы об уходе.</p>'
+  entries=[]
+  for article in published:
+   href='/articles/'+article['slug']+'/'
+   entries.append(f'<li><{heading}><a href="{href}">{H(article["title"])}</a></{heading}><p>{H(article["summary"])}</p></li>')
+  return '<ul class="article-links">'+'\n'.join(entries)+'</ul>'
  pages={}
  def save_page(path,t,title,desc,crumbs,image=None,index=True,extra=None,business=False,ptype='WebPage'):
   graph=[{'@type':'WebSite','@id':base+'/#website','name':cfg['name'],'url':base+'/','inLanguage':'ru-RU','publisher':{'@id':base+'/#studio'}}, {'@type':ptype,'@id':absurl(path)+'#webpage','url':absurl(path),'name':title,'description':desc,'inLanguage':'ru-RU','isPartOf':{'@id':base+'/#website'},'about':{'@id':base+'/#studio'}}]
@@ -101,8 +105,7 @@ def main():
   if extra:graph+=extra
   image=image or cfg.get('social_image',cfg['default_image'])
   social=image==cfg.get('social_image')
-  article_image=next((a for a in articles if a.get('image')==image),None)
-  dims=(cfg['social_image_width'],cfg['social_image_height']) if social else (article_image['image_width'],article_image['image_height']) if article_image else (1672,941) if image==cfg['default_image'] else (1254,1254) if image in [c['image'] for c in CATEGORIES] else None
+  dims=(cfg['social_image_width'],cfg['social_image_height']) if social else (1672,941) if image==cfg['default_image'] else (1254,1254) if image in [c['image'] for c in CATEGORIES] else None
   image_alt=cfg['social_image_alt'] if social else title
   image_type={'.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp'}.get(Path(image).suffix.lower())
   dimensions=(f'<meta property="og:image:width" content="{dims[0]}"><meta property="og:image:height" content="{dims[1]}">' if dims else '')
@@ -113,6 +116,8 @@ def main():
   if path=='/':
    preloads=''.join(f'<link rel="preload" as="image" href="{asset}" fetchpriority="high">' for asset in ['/assets/app-visual.webp','/assets/app-store-light-clean.webp'])
    head=head.replace('<meta charset="UTF-8">','<meta charset="UTF-8">'+preloads,1)
+  if path.startswith('/articles/'):
+   head=head.replace('<script src="/app.js" defer></script>','')
   t=re.sub(r'<head>.*?</head>',lambda m:'<head>\n'+head+'\n</head>',t,count=1,flags=re.S)
   # Current canonical origin is rewritten in visible microdata as well.
   t=re.sub(r'itemid="https://[^\"]+/#studio"',f'itemid="{base}/#studio"',t)
@@ -127,7 +132,9 @@ def main():
  t=re.sub(r'(<h1 id="hero-title">Косметология<br>)\s*',r'\1\n',t)
  t=t.replace('<p class="eyebrow">ЛИЦО · ТЕЛО · ВАШЕ СОСТОЯНИЕ</p><h2 id="services-title">Забота начинается здесь.</h2>','<h2 class="eyebrow service-section-label" id="services-title">Услуги студии</h2><p class="services-display-title">Забота начинается здесь.</p>')
  start=t.index('<div class="service-grid">');end=t.index('<p class="services-additional">',start);t=t[:start]+cards()+t[end:]
- t=re.sub(r'<div class="articles-grid">.*?</div></section>',lambda m:article_cards()+'</section>',t,count=1,flags=re.S)
+ article_section='<section class="section container articles-section" id="articles" aria-labelledby="articles-title"><div class="section-heading"><h2 id="articles-title">Статьи.</h2><a class="text-link" href="/articles/">Все статьи</a></div>'+article_links('h3')+'</section>'
+ t=re.sub(r'<section\b[^>]*\bid="articles"[^>]*>.*?</section>',lambda m:article_section,t,count=1,flags=re.S)
+ t=re.sub(r'<dialog\b[^>]*\bid="article-soon-dialog"[^>]*>.*?</dialog>\n?', '',t,count=1,flags=re.S)
  # Add a native detail link inside the existing modal while preserving its price and booking actions.
  if 'id="service-page-link"' not in t:t=t.replace('<div class="dialog-actions">','<a class="text-link service-page-link" id="service-page-link" href="/services/">Подробнее о направлении →</a><div class="dialog-actions">',1)
  # Visible contacts carry a second, microdata representation for local search compatibility.
@@ -194,28 +201,25 @@ def main():
   service={'@type':'Service','@id':absurl(path)+'#service','name':c['name'],'serviceType':c['name'],'description':c['intro'],'url':absurl(path),'image':absurl(c['image']),'provider':{'@id':base+'/#studio'},'areaServed':{'@type':'City','name':cfg['city']},'hasOfferCatalog':{'@type':'OfferCatalog','name':'Процедуры: '+c['name'],'itemListElement':[offer(s) for s in selected]}}
   save_page(path,shell(main),f'{c["name"]} в Санкт-Петербурге, цены — Про НЕЁ',f'{c["name"]} в студии Про НЕЁ. {cfg["street"]}. Разовые процедуры от {money(startprice)}. Процедуры, длительность и онлайн-запись в DIKIDI.',[('Главная','/'),('Услуги','/services/'),(c['name'],None)],image=c['image'],business=True,extra=[service])
  # Drafts never become Article markup or sitemap entries; actual publication is explicit and validated.
- dialog='<dialog id="article-soon-dialog" class="dialog" aria-labelledby="article-soon-title"><button class="dialog-close" data-close aria-label="Закрыть">×</button><p class="eyebrow">СТАТЬИ ПРО НЕЁ</p><h2 id="article-soon-title">Статья скоро дополнится.</h2><p class="dialog-description" id="article-soon-subject"></p></dialog>'
- main=f'<main class="subpage container" id="services">{breadcrumbs([("Главная","/"),("Статьи",None)])}<div class="subpage-heading"><h1>Статьи.</h1></div><section class="article-list"><h2 class="article-list-label">{"Материалы студии" if published else "Готовим материалы"}</h2>{article_cards()}</section></main>'
- save_page('/articles/',shell(main).replace('</body>',dialog+'</body>'),'Об уходе простыми словами — статьи Про НЕЁ','Материалы студии Про НЕЁ об уходе за лицом и телом, косметологии и массаже. Вопросы перед процедурами и понятные объяснения.',[('Главная','/'),('Статьи',None)],index=bool(published),ptype='CollectionPage')
+ main=f'<main class="subpage container article-page">{breadcrumbs([("Главная","/"),("Статьи",None)])}<div class="subpage-heading"><h1>Статьи об уходе и процедурах</h1></div>{article_links("h2")}</main>'
+ save_page('/articles/',article_shell(main),'Об уходе простыми словами — статьи Про НЕЁ','Материалы студии Про НЕЁ об уходе за лицом и телом, косметологии и массаже. Вопросы перед процедурами и понятные объяснения.',[('Главная','/'),('Статьи',None)],index=bool(published),ptype='CollectionPage')
  for a in articles:
   path='/articles/'+a['slug']+'/';ready=a['status']=='published';extra=[]
   content='<div class="article-pending"><h2>Статья скоро дополнится.</h2><p>Мы готовим материал. Загляните сюда чуть позже.</p></div>'
   if ready:
    author=a['author'];published_label=datetime.fromisoformat(a['published_at']).strftime('%d.%m.%Y');updated_label=datetime.fromisoformat(a['updated_at']).strftime('%d.%m.%Y')
-   content=f'<p class="article-byline">Материал студии <a href="{H(author.get("url","/#specialists"),quote=True)}">{H(author["name"])}</a> · Опубликовано <time datetime="{a["published_at"]}">{published_label}</time>'
+   content=f'<p class="article-lead">{H(a.get("lead") or a["summary"])}</p>'
+   content+=f'<p class="article-byline">Материал студии <a href="{H(author.get("url","/#specialists"),quote=True)}">{H(author["name"])}</a> · Опубликовано <time datetime="{a["published_at"]}">{published_label}</time>'
    if updated_label!=published_label:content+=f' · Обновлено <time datetime="{a["updated_at"]}">{updated_label}</time>'
    content+='</p>'
-   if a.get('lead'):content+=f'<p class="article-lead">{H(a["lead"])}</p>'
    content+='<div class="article-content">'+''.join('<section><h2>'+H(s['heading'])+'</h2>'+''.join('<p>'+H(p)+'</p>' for p in s.get('paragraphs',[]))+('<ul>'+''.join('<li>'+H(b)+'</li>' for b in s['bullets'])+'</ul>' if s.get('bullets') else '')+'</section>' for s in a['sections'])+'</div>'
-   if a.get('image'):content=f'<img class="article-hero-image" src="{H(a["image"],quote=True)}" width="{int(a["image_width"])}" height="{int(a["image_height"])}" alt="{H(a.get("image_alt",a["title"]),quote=True)}">'+content
    if a.get('sources'):content+='<section class="article-sources"><h2>Источники</h2><ul>'+''.join(f'<li><a href="{H(s["url"],quote=True)}" target="_blank" rel="noopener noreferrer">{H(s["title"])}</a></li>' for s in a['sources'])+'</ul></section>'
    if a.get('related_links'):content+='<nav class="article-related" aria-label="По теме"><h2>По теме</h2><ul>'+''.join(f'<li><a href="{H(link["url"],quote=True)}">{H(link["label"])}</a></li>' for link in a['related_links'])+'</ul></nav>'
    content+=f'<aside class="article-studio-note" aria-label="О студии"><p>Про НЕЁ · {H(cfg["city"])}</p><p><a href="{H(cfg["map_url"],quote=True)}" target="_blank" rel="noopener noreferrer">{H(cfg["street"])}</a> · {H(cfg["location_note"])}</p><p>По предварительной записи: <a href="tel:{cfg["telephone"]}">{H(cfg["telephone_display"])}</a>.</p></aside>'
    extra=[{'@type':'BlogPosting','@id':absurl(path)+'#article','headline':a['title'],'description':a['summary'],'mainEntityOfPage':{'@id':absurl(path)+'#webpage'},'author':{'@type':author.get('type','Person'),'name':author['name'],'url':absurl(author.get('url','/#specialists'))},'publisher':{'@id':base+'/#studio'},'datePublished':a['published_at'],'dateModified':a['updated_at'],'inLanguage':'ru-RU'}]
-   if a.get('image'):extra[0]['image']=absurl(a['image'])
    if a.get('sources'):extra[0]['citation']=[s['url'] for s in a['sources']]
-  main=f'<main class="subpage container article-page" id="article">{breadcrumbs([("Главная","/"),("Статьи","/articles/"),(a["title"],None)])}<article><div class="subpage-heading"><p class="eyebrow">ПОЛЕЗНО ЗНАТЬ</p><h1>{H(a["title"])}</h1></div>{content}</article></main>'
-  save_page(path,shell(main),a['title']+' — Про НЕЁ',a['summary'] if ready else a['title']+'. Статья готовится.',[('Главная','/'),('Статьи','/articles/'),(a['title'],None)],image=a.get('image') or None,index=ready,extra=extra,business=ready)
+  main=f'<main class="subpage container article-page" id="article">{breadcrumbs([("Главная","/"),("Статьи","/articles/"),(a["title"],None)])}<article><header class="subpage-heading"><h1>{H(a["title"])}</h1></header>{content}</article></main>'
+  save_page(path,article_shell(main),a['title']+' — Про НЕЁ',a['summary'] if ready else a['title']+'. Статья готовится.',[('Главная','/'),('Статьи','/articles/'),(a['title'],None)],index=ready,extra=extra,business=ready)
  main='<main class="subpage container"><div class="subpage-heading"><p class="eyebrow">ПРО НЕЁ</p><h1>Страница не найдена.</h1><p>Перейдите на главную или выберите нужную услугу.</p></div><div class="location-actions"><a class="button" href="/">На главную</a><a class="text-link" href="/services/">Услуги студии →</a></div></main>'
  save_page('/404.html',shell(main),'Страница не найдена — Про НЕЁ','Страница не найдена. Услуги и запись в студию Про НЕЁ.',[],index=False)
  # Regenerate modal prices from the same catalog, not a second hand-maintained list.
@@ -236,6 +240,7 @@ def main():
  for path,p in pages.items():
   if p['indexable']:
    e=ET.SubElement(smap,'{'+ns+'}url');ET.SubElement(e,'{'+ns+'}loc').text=absurl(path);ET.SubElement(e,'{'+ns+'}lastmod').text=p['lastmod']
+ ET.indent(smap,space='  ')
  ET.ElementTree(smap).write(d/'sitemap.xml',encoding='UTF-8',xml_declaration=True)
  robots='User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nSitemap: '+base+'/sitemap.xml\n'
  (d/'robots.txt').write_text(robots)

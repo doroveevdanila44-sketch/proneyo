@@ -55,7 +55,10 @@ class Pipeline(unittest.TestCase):
   page=(self.root/'dist/articles'/a[0]['slug']/'index.html').read_text()
   self.assertIn('Проверка текста &lt;важно&gt;',page);self.assertIn('BlogPosting',page);self.assertNotIn('Статья скоро дополнится.',page)
   self.assertIn('/articles/'+a[0]['slug']+'/',(self.root/'dist/sitemap.xml').read_text())
-  self.assertIn('Читать материал',(self.root/'dist/articles/index.html').read_text())
+  listing=(self.root/'dist/articles/index.html').read_text()
+  self.assertIn('href="/articles/'+a[0]['slug']+'/"',listing)
+  for rendered in [listing,page]:
+   self.assertNotRegex(rendered,r'<(?:img|video|dialog)\b|<script[^>]+src=')
   self.assertEqual(json.loads((self.root/'seo-pages.json').read_text())['sitemap_entries'],10+sum(x['status']=='published' for x in a))
   self.assertTrue(validate_static(self.root)['passed'])
  def test_reversed_dates_rejected_across_timezones(self):

@@ -618,6 +618,16 @@ html{background:#fbf7f1;color-scheme:light}
 .article-content{max-width:65ch}
 .article-content p,.article-content li{font-size:16px;line-height:1.75}
 .article-content li::marker{color:var(--berry)}
+.article-site-header{padding-block:20px;border-bottom:1px solid var(--line)}
+.article-site-header nav{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.article-site-header .article-brand{font-family:var(--serif);font-size:23px;color:var(--berry-deep)}
+.article-site-header a,.article-links a{text-decoration:underline;text-underline-offset:.18em}
+.article-links{max-width:720px;margin:0;padding:0;list-style:none}
+.article-links li{padding-block:20px;border-top:1px solid var(--line)}
+.article-links :is(h2,h3){font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.02em}
+.article-links p{margin-top:8px;color:var(--body);line-height:1.65}
+html:has(.articles-text-page){scroll-behavior:auto}
+.articles-text-page *,.articles-text-page *::before,.articles-text-page *::after{animation:none;transition:none}
 @media(max-width:600px){
  .procedure-points,.article-content p,.article-content li{font-size:15px}
  .service-care{margin-top:32px}

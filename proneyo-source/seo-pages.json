@@ -1,5 +1,5 @@
 {
-  "site_url": "https://proneyo.vercel.app",
+  "site_url": "https://pro-neyo.ru",
   "generated_pages": {
     "/": {
       "file": "index.html",
@@ -13,7 +13,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-23"
     },
     "/prices/": {
       "file": "prices/index.html",
@@ -28,7 +28,7 @@
         "OfferCatalog",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-23"
     },
     "/services/": {
       "file": "services/index.html",
@@ -43,7 +43,7 @@
         "ItemList",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-23"
     },
     "/services/kosmetologiya/": {
       "file": "services/kosmetologiya/index.html",
@@ -58,7 +58,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-23"
     },
     "/services/massazh/": {
       "file": "services/massazh/index.html",
@@ -73,7 +73,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-23"
     },
     "/services/spa-uhod/": {
       "file": "services/spa-uhod/index.html",
@@ -88,7 +88,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-23"
     },
     "/services/korrekciya-figury/": {
       "file": "services/korrekciya-figury/index.html",
@@ -103,7 +103,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-23"
     },
     "/services/detskiy-massazh/": {
       "file": "services/detskiy-massazh/index.html",
@@ -118,7 +118,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-23"
     },
     "/services/depilyaciya-i-pirsing/": {
       "file": "services/depilyaciya-i-pirsing/index.html",
@@ -133,7 +133,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-17"
+      "lastmod": "2026-11-23"
     },
     "/articles/": {
       "file": "articles/index.html",
@@ -146,14 +146,14 @@
         "CollectionPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-04"
+      "lastmod": "2026-11-23"
     },
     "/articles/cellyulit-i-zhirovye-otlozheniya/": {
       "file": "articles/cellyulit-i-zhirovye-otlozheniya/index.html",
       "title": "Почему целлюлит бывает и у стройных — Про НЕЁ",
       "description": "Почему ямочки на коже могут оставаться после похудения, чем целлюлит отличается от жировых отложений и какого эффекта ждать от роликового массажа.",
       "indexable": true,
-      "image": "/assets/article-cellulite-editorial-v5.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BeautySalon",
         "BlogPosting",
@@ -161,14 +161,14 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-23"
     },
     "/articles/voprosy-pered-kursom-procedur/": {
       "file": "articles/voprosy-pered-kursom-procedur/index.html",
       "title": "Пять вопросов перед курсом процедур — Про НЕЁ",
       "description": "Что спросить на консультации, чтобы понять, подходит ли вам процедура, сколько будет стоить курс и как оценить результат.",
       "indexable": true,
-      "image": "/assets/article-writing-relaxed-v9.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BeautySalon",
         "BlogPosting",
@@ -176,14 +176,14 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-23"
     },
     "/articles/domashniy-uhod-mezhdu-procedurami/": {
       "file": "articles/domashniy-uhod-mezhdu-procedurami/index.html",
       "title": "Домашний уход между процедурами: с чего начать — Про НЕЁ",
       "description": "Как умываться, увлажнять кожу и пользоваться SPF между процедурами. Что обсудить со специалистом, прежде чем возвращаться к привычным средствам после пилинга.",
       "indexable": true,
-      "image": "/assets/article-homecare-editorial-v5.webp",
+      "image": "/assets/pro-neyo-social-v1.png",
       "schema_types": [
         "BeautySalon",
         "BlogPosting",
@@ -191,7 +191,7 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-11-13"
+      "lastmod": "2026-11-23"
     },
     "/404.html": {
       "file": "404.html",
@@ -203,11 +203,11 @@
         "WebPage",
         "WebSite"
       ],
-      "lastmod": "2026-10-30"
+      "lastmod": "2026-11-23"
     }
   },
   "sitemap_entries": 13,
   "published_articles": 3,
   "procedure_records": 72,
-  "cache": "81e2e7eb67b9"
+  "cache": "b5795a6287e9"
 }
