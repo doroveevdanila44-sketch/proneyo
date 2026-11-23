@@ -4,4 +4,4 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://proneyo.vercel.app/sitemap.xml
+Sitemap: https://pro-neyo.ru/sitemap.xml
